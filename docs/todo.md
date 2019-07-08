@@ -6,6 +6,15 @@
 - [ ] [Node.js技术栈](https://www.nodejs.red/#/)
 - [ ] [JSDoc 中文文档](https://www.html.cn/doc/jsdoc/index.html)
 - [ ] [ECMAScript 6 入门](http://es6.ruanyifeng.com/)
+- [ ] [前端精读周刊](https://github.com/dt-fe/weekly)
+- [ ] [Weekly-FE-Interview](https://github.com/airuikun/Weekly-FE-Interview)
+- [ ] [30-seconds-of-code](https://github.com/30-seconds/30-seconds-of-code)
+- [ ] [如何通过饿了么 Node.js 面试](https://github.com/ElemeFE/node-interview/tree/master/sections/zh-cn)
+- [ ] [狼叔：如何正确的学习Node.js](https://github.com/i5ting/How-to-learn-node-correctly)
+- [ ] [Nodejs学习笔记以及经验总结，公众号"程序猿小卡"](https://github.com/chyingp/nodejs-learning-guide)
+- [ ] [Vue.js 源码解析](https://github.com/answershuto/learnVue)
+- [ ] [面试官教你写简历（有点干，慎入）](https://juejin.im/post/5d1dc5ee51882561b52b7013)
+- [ ] [【前端词典】年中回望（附文章集合）](https://juejin.im/post/5d1ebd2ff265da1b6a34b3df)
 
 ### Node.js
 
@@ -20,6 +29,7 @@ Koa源码浅析                    | [知乎](https://zhuanlan.zhihu.com/p/70985
 
 牛人|博客
 ---|---
+黄轶 | [ustbhuangyi](https://github.com/ustbhuangyi)
 冴羽 | [Blog](https://github.com/mqyqingfeng/Blog)
 五月君 | [手记](https://www.imooc.com/u/2667395/articles)
 
