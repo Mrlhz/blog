@@ -20,7 +20,7 @@
 [A-z]	  |查找任何从大写 A 到小写 z 的字符
 [adgk]	|查找给定集合内的任何字符
 [^adgk]	|查找给定集合外的任何字符
-(red|blue|green)	|查找任何指定的选项
+(red &#166; blue &#166; green)	|查找任何指定的选项
 
 ### 元字符
 元字符 |	描述
@@ -156,12 +156,14 @@ while(reg2.test('ab')){
 }
 ```
 
-1. rex.test("str")--> 是否与正则匹配；
-2. rex.exec("str")--> 接受返回数组。会从lastIndex处开始匹配而不是从头匹配；
-3. "str".search(rex)--> 查找第一次匹配的子字符串的位置.忽视g全局；
-4. "str".replace(rex)--> 字符串中的某些子串替换为需要的内容
-5. "str".split(rex)--> 将一个字符串拆分成一个数组
-6. "str".match(rex)--> g时将所有匹配结果以数组形式返回
+方法 | 说明
+---|--- 
+`rex.test("str")`|是否与正则匹配；
+`rex.exec("str")`| 接受返回数组。会从lastIndex处开始匹配而不是从头匹配；
+`"str".search(rex)`| 查找第一次匹配的子字符串的位置.忽视g全局；
+`"str".replace(rex)`| 字符串中的某些子串替换为需要的内容
+`"str".split(rex)`| 将一个字符串拆分成一个数组
+`"str".match(rex)`| g时将所有匹配结果以数组形式返回
 
 
 ### 前瞻

@@ -23,7 +23,7 @@ docsify serve docs -p 3000
 
 ### 部署到GitHub Pages
 
-访问`https://mrlhz.github.io/blog`
+访问 [`https://mrlhz.github.io/blog`](https://mrlhz.github.io/blog)
 
 
 ### git commit 规范指南

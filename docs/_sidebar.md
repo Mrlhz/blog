@@ -9,6 +9,7 @@
 
 * JavaScript
     * [RegExp 对象](js-regexp.md)
+    * [博客文章](js-blog.md)
 
 * 资源导航
     * [docs](docs.md)
