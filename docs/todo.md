@@ -15,6 +15,8 @@
 - [ ] [Vue.js 源码解析](https://github.com/answershuto/learnVue)
 - [ ] [面试官教你写简历（有点干，慎入）](https://juejin.im/post/5d1dc5ee51882561b52b7013)
 - [ ] [【前端词典】年中回望（附文章集合）](https://juejin.im/post/5d1ebd2ff265da1b6a34b3df)
+- [ ] [How-To-Ask-Questions-The-Smart-Way](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way)
+- [ ] [vue 248个知识点（面试题）为你保驾护航](https://juejin.im/post/5d153267e51d4510624f9809)
 
 ### Node.js
 
