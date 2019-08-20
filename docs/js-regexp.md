@@ -141,6 +141,7 @@ str.match(/\d{3,6}/) // ["123456", index: 0, input: "12345678", groups: undefine
 ```js
 var str ='123456789'
 str.match(/\d{3,6}?/g) // ["123", "456", "789"]
+str.match(/\d{3,6}/g) // ["123456", "789"]
 ```
 
 ### 忽略分组（非捕获分组）
@@ -215,15 +216,22 @@ getParam('https://www.domain.com/?user=anonymous&id=123&id=456&city=%E5%8C%97%E4
 // 匹配的是后面是3*n个数字的非单词边界(\B)
 // bug 小数点不能超过3位
 /**
- * 
+ * @description 
+ * @see https://juejin.im/post/5b026bbb5188256720345bb4
  * @param {string} str 
  */
-function thousandSeparator(str) {
-  return str.replace(/\B(?=(?:\d{3})+(?!\d))/g, ',')
+function thousandSeparator(str, flag) {
+  re = flag ? /(?<!\.\d*)\B(?=(\d{3})+(?!\d))/g : /\B(?=(?:\d{3})+(?!\d))/g
+
+  return str.replace(re, ',')
 }
 
 thousandSeparator('1234567890') // 1,234,567,890
 thousandSeparator('123456789.1369') // 123,456,789.1,369
+thousandSeparator('123456789.1369', true) // 123,456,789.1369
+
+(123456789).toLocaleString() // 123,456,789
+(123456789.1369).toLocaleString() // 123,456,789.137
 ```
 
 </details>

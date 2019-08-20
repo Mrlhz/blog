@@ -136,6 +136,51 @@ grid-template-columns: repeat(2, 100px 20px 80px);
 - grid-row-start
 - grid-row-end
 
+```css
+.item-1 {
+  background-color: #ef342a;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4; /* */
+}
+```
+
+<html>
+<!--  -->
+<style>
+.wrap{display:grid;grid-template-rows:100px 100px;grid-template-columns:100px 100px 100px 100px;}.item{font-size:64px;text-align:center;}.item-1{background-color:#ef342a;grid-column-start:2;grid-column-end:4;grid-row-start:1;grid-row-end:3;}.item-2{background-color:#f68f26;}.item-3{background-color:#4ba946;}.item-4{background-color:#0376c2;}.item-5{background-color:#c077af;}
+  </style>
+  <div class="wrap">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+    <div class="item item-4">4</div>
+    <div class="item item-5">5</div>
+  </div>
+</html>
+
+---
+
+
+<html>
+<style>
+#container{display:grid;grid-template-columns:100px 100px 100px;grid-template-rows:100px 100px 100px;grid-template-areas:'a b c'
+                     'd e f'
+                     'g h i';}.item{font-size:4em;text-align:center;border:1px solid #e5e4e9;}#container .item-1{background-color:#ef342a;grid-area:e;}.item-2{background-color:#f68f26;}.item-3{background-color:#4ba946;}.item-4{background-color:#0376c2;}.item-5{background-color:#c077af;}.item-6{background-color:#f8d29d;}.item-7{background-color:#b5a87f;}.item-8{background-color:#d0e4a9;}.item-9{background-color:#4dc7ec;}
+</style>
+<div id="container">
+  <div class="item item-1">1</div>
+  <div class="item item-2">2</div>
+  <div class="item item-3">3</div>
+  <div class="item item-4">4</div>
+  <div class="item item-5">5</div>
+  <div class="item item-6">6</div>
+  <div class="item item-7">7</div>
+  <div class="item item-8">8</div>
+  <div class="item item-9">9</div>
+</div> 
+</html>
 
 - `grid-column`: `grid-column-start`和`grid-column-end`的合并简写形式
 - `grid-row`: `grid-row-start`属性和`grid-row-end`的合并简写形式
