@@ -90,9 +90,8 @@ function isPalindromic(str) {
 
 /**
  * @description 
- *
- * @param {*} str
- * @returns
+ * @param {String} str
+ * @returns {String}
  */
 function longestPalindrome(str) {
   let len = str.length
