@@ -14,6 +14,7 @@
     * [博客文章](js-blog.md)
     * [Node util](node-helper.md)
     * [力扣题库](js-leetcode-cn.md)
+    * [对象继承](js-object-create-inherit.md)
 
 * 资源导航
     * [docs](docs.md)
