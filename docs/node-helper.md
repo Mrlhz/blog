@@ -205,3 +205,66 @@ fs.exists(path.resolve(__dirname, 'screenshot.png'), (e) =>{
 })
 ```
 </details>
+
+
+<details>
+<summary>异步保存文件</summary>
+
+```js
+/**
+ * @description 异步保存文件，文件已存在则替换
+ *
+ * @param {String} fileName 文件名，包括文件类型
+ * @param {String} data 
+ * @param {Object} options
+ */
+function writeFile(fileName, data = '', options = {}) {
+  let {
+    output = '', // 为空时默认存放路径为 files  D:\web\puppeteer\files
+    encoding = 'utf8'
+  } = options
+  log('output', output);
+  output = output ? path.resolve(output, fileName) : path.resolve(__dirname, '../../files', fileName)
+  data = typeof data === 'string' ? data : JSON.stringify(data);
+  
+  // content = content.replace(/\n\r/gi, '').replace(/\n/gi, '').replace(/\r/gi, '');
+
+  return new Promise((resolve, reject) => {
+    fs.writeFile(output, data, encoding, err => {
+      if (err) {
+        log('写入失败', err)
+        reject(err)
+      } else {
+        log(`写入成功 => ${output}`)
+        resolve('success')
+      }
+    })
+  })
+}
+```
+</details>
+
+
+
+<details>
+<summary>同步创建文件夹</summary>
+
+```js
+/**
+ * @description 创建文件夹，返回文件夹绝对路径，文件夹存在则不创建，返回绝对路径
+ * @param {String} dirName new dir name
+ * @param {String} pathName  A path to a file. If a URL is provided, it must use the file: protocol.
+ * @returns {String} path 
+ */
+function mkdirSync(dirName, pathName) {
+  let output = path.resolve(pathName, dirName)
+  if (fs.existsSync(output)) {
+    log('dir ' + output + ' exist');
+    return output
+  }
+  fs.mkdirSync(output)
+  log('mkdir '+ output +' success');
+  return output
+}
+```
+</details>
