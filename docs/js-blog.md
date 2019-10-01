@@ -1,6 +1,6 @@
 # 博客文章
 
-
+- [ ] [用动画的形式呈现解LeetCode题目的思路](https://github.com/MisterBooo/LeetCodeAnimation)
 - [x] [五个小技巧让你写出更好的 JavaScript 条件语句](https://juejin.im/post/5bb9e3085188255c352d7326)
 - [ ] [前端必须懂的计算机网络知识—(跨域、代理、本地存储)](https://juejin.im/post/5bb1cc2af265da0ae5052496)
 - [ ] [JavaScript类型检测(javascript常用工具类的封装)](https://segmentfault.com/a/1190000013041329)
@@ -49,3 +49,23 @@
 - [ ] [React.js 小书](http://huziketang.mangojuice.top/books/react/)
 - [ ] [深拷贝的终极探索](https://yanhaijing.com/javascript/2018/10/10/clone-deep/)
 - [ ] [【进阶4-3期】面试题之如何实现一个深拷贝](https://juejin.im/post/5c62167ce51d450164636d19)
+
+### 工具
+
+- [印记中文](https://docschina.org/)
+- [正则测试工具](https://tool.lu/regex/)
+- [an open source pastebin with runnable snippets and API.](https://glot.io/)
+- [程序员导航](https://geekdocs.cn/)
+
+### 面试
+
+- [HR面试都会问什么问题？（下）](https://juejin.im/post/5d78d8dae51d4561cf15e057)
+- [Step-By-Step](https://github.com/YvetteLau/Step-By-Step)
+
+
+### github项目
+
+- [免费的计算机编程类中文书籍](https://github.com/justjavac/free-programming-books-zh_CN)
+- [imooc的echarts入门教程]( http://www.imooc.com/view/687)
+- [liuyubobobo-algorithms](https://github.com/19920625lsg/liuyubobobo-algorithms)
+- [algorithm-base-ts](https://github.com/weiavia/algorithm-base-ts)

@@ -269,3 +269,14 @@ matchHrefValue(str4) // https://www.yuque.com/itchina110/goodfe
 
 ```
 </details>
+
+
+```js
+/<span class="line-number">\d*<\/span>/
+
+<span class="line-number">1</span>
+<span class="line-number">2</span>
+...
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+```
