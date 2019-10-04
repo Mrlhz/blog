@@ -5,32 +5,33 @@
 <summary>批量重命名文件</summary>
 
 ```js
+
+const fs = require('fs')
+const path = require('path')
+const { writeFile } = require('./writeFile')
+const { padzeros } = require('./padzeros')
 /**
  * @description 批量重命名dir下的文件
- *
- * @param {String} dir
+ * @param {String} dir 目录路径
+ * @param {String} name 文件名
  */
-async function renameFile(dir, fileName=pins) {
-  const files = await readDirFiles(dir)
-  try {
-    files.forEach((el, index) => {
-      let [name, extname] = el.split('.')
-      
-      index++;
-      if (extname !== 'txt') {
-        fs.rename(`${dir}/${el}`, `${dir}/${fileName}${index}.${extname}`, (err) => {
-          if (err) throw err;
-          console.log(`重命名完成: ${el} => ${fileName}${index}.${extname}`);
-        })
-      }
-    })
-
-  } catch (e) {
-    console.log('what error', e);
-  }
+async function renameFile(dir, name) {
+  const fileList = fs.readdirSync(dir)
+  fileList.forEach((file, index) => {
+    const oldPath = path.join(dir, file)
+    if(fs.statSync(oldPath).isFile()) {
+      const { ext } = path.parse(oldPath)
+      const newName = name + padzeros(index + 1) + ext
+      const newPath = path.join(dir, newName)
+      fs.rename(oldPath, newPath, (err) => {
+        if (err) console.log(err)
+        console.log(`rename complete: ${oldPath} => ${newPath}`)
+      })
+    }
+  })
 }
 
-renameFile('D:/.../images')
+renameFile('D:/../path', 'test-')
 ```
 </details>
 
@@ -39,48 +40,7 @@ renameFile('D:/.../images')
 <summary>保存dir文件名到txt文件中</summary>
 
 ```js
-const fs = require('fs')
-const path = require('path')
 
-function readDirFiles(dir) {
-  return new Promise((resolve, reject) => {
-    fs.readdir(dir, (err, file) => {
-      if (err) reject(err)
-      resolve(file)
-    })
-  })
-}
-
-/**
- * @description 保存dir文件名到txt文件中
- *
- * @param {String} dir 文件目录
- * @param {String} txtDir txt输出目录
- */
-function writeTxt(dir, txtDir) {
-  readDirFiles(dir)
-    .then((res) => {
-          console.log(res);
-      if (res) {
-        let str = ''
-        res.forEach((el, index) => {
-          index++
-          index = index > 9 ? index : '0' + index
-          // console.log(index,'index')
-          str += `${index}. [${el}](\r\n`;
-        });
-        fs.writeFile(dir + txtDir, str, 'utf8', (err) => {
-          if (err) throw err;
-          console.log('文件已被保存');
-        });
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    })
-}
-
-// writeTxt('D:/...', '/list.txt')
 ```
 </details>
 
@@ -211,26 +171,25 @@ fs.exists(path.resolve(__dirname, 'screenshot.png'), (e) =>{
 <summary>异步保存文件</summary>
 
 ```js
+const fs = require('fs')
+const path = require('path')
+const log = console.log
+
 /**
  * @description 异步保存文件，文件已存在则替换
- *
- * @param {String} fileName 文件名，包括文件类型
- * @param {String} data 
- * @param {Object} options
+ * @param {Object} [options={fileName, data, output}] fileName, data, output, encoding
+ * @returns
  */
-function writeFile(fileName, data = '', options = {}) {
-  let {
-    output = '', // 为空时默认存放路径为 files  D:\web\puppeteer\files
-    encoding = 'utf8'
-  } = options
-  log('output', output);
-  output = output ? path.resolve(output, fileName) : path.resolve(__dirname, '../../files', fileName)
-  data = typeof data === 'string' ? data : JSON.stringify(data);
+function writeFile(options = {}) {
+  let { fileName = '未命名' + Date.now(), data = '', output = '', encoding = 'utf8' } = options
+  // log('output', output)
+  output = output ? path.resolve(output, fileName) : path.join(__dirname, fileName)
+  data = typeof data === 'string' ? data : JSON.stringify(data)
   
-  // content = content.replace(/\n\r/gi, '').replace(/\n/gi, '').replace(/\r/gi, '');
+  // content = content.replace(/\n\r/gi, '').replace(/\n/gi, '').replace(/\r/gi, '')
 
   return new Promise((resolve, reject) => {
-    fs.writeFile(output, data, encoding, err => {
+    fs.writeFile(output, data, encoding, (err) => {
       if (err) {
         log('写入失败', err)
         reject(err)
@@ -241,6 +200,9 @@ function writeFile(fileName, data = '', options = {}) {
     })
   })
 }
+
+writeFile({ fileName: 'test.js' }) // 写入成功 => test.js
+writeFile({}) // 写入成功 => 未命名1570149969554
 ```
 </details>
 
@@ -250,21 +212,27 @@ function writeFile(fileName, data = '', options = {}) {
 <summary>同步创建文件夹</summary>
 
 ```js
+const fs = require('fs')
+const path = require('path')
+const log = console.log
+
 /**
  * @description 创建文件夹，返回文件夹绝对路径，文件夹存在则不创建，返回绝对路径
  * @param {String} dirName new dir name
  * @param {String} pathName  A path to a file. If a URL is provided, it must use the file: protocol.
  * @returns {String} path 
  */
-function mkdirSync(dirName, pathName) {
+function mkdirSync(dirName, pathName='.') {
   let output = path.resolve(pathName, dirName)
   if (fs.existsSync(output)) {
-    log('dir ' + output + ' exist');
+    log('dir ' + output + ' exist')
     return output
   }
   fs.mkdirSync(output)
-  log('mkdir '+ output +' success');
+  log('mkdir '+ output +' success')
   return output
 }
+
+mkdirSync('test') // 当前目录创建test文件夹
 ```
 </details>
