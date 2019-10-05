@@ -49,6 +49,7 @@
 - [ ] [React.js 小书](http://huziketang.mangojuice.top/books/react/)
 - [ ] [深拷贝的终极探索](https://yanhaijing.com/javascript/2018/10/10/clone-deep/)
 - [ ] [【进阶4-3期】面试题之如何实现一个深拷贝](https://juejin.im/post/5c62167ce51d450164636d19)
+- [ ] [VUE 3](https://github.com/vuejs/vue-next)
 
 ### 工具
 
@@ -56,6 +57,7 @@
 - [正则测试工具](https://tool.lu/regex/)
 - [an open source pastebin with runnable snippets and API.](https://glot.io/)
 - [程序员导航](https://geekdocs.cn/)
+- [YOU MIGHT NOT NEED JQUERY](http://youmightnotneedjquery.com/)
 
 ### 面试
 
