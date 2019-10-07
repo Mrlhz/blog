@@ -50,6 +50,7 @@
 - [ ] [深拷贝的终极探索](https://yanhaijing.com/javascript/2018/10/10/clone-deep/)
 - [ ] [【进阶4-3期】面试题之如何实现一个深拷贝](https://juejin.im/post/5c62167ce51d450164636d19)
 - [ ] [VUE 3](https://github.com/vuejs/vue-next)
+- [ ] [Vue Composition API](https://vue-composition-api-rfc.netlify.com/)
 
 ### 工具
 
@@ -63,7 +64,15 @@
 
 - [HR面试都会问什么问题？（下）](https://juejin.im/post/5d78d8dae51d4561cf15e057)
 - [Step-By-Step](https://github.com/YvetteLau/Step-By-Step)
-
+- [前端进阶之道](https://github.com/InterviewMap/CS-Interview-Knowledge-Map)
+- [Daily-Interview-Question](https://github.com/Advanced-Frontend/Daily-Interview-Question)
+- [大前端面试宝典 - 图解前端](https://lucifer.ren/fe-interview/#/)
+- [阿里巴巴面试资源汇总](https://github.com/stone0090/alibaba-interview)
+- [前端面试每日 3+1](https://github.com/haizlin/fe-interview)
+- [如何通过饿了么 Node.js 面试](https://github.com/ElemeFE/node-interview/tree/master/sections/zh-cn)
+- [目前最全的前端开发面试题及答案?](https://github.com/HerbertKarajan/Fe-Interview-questions)
+- [前端面试常考问题整理，按模块知识点分类](https://github.com/poetries/FE-Interview-Questions)
+- [重磅：硬核前端面试开源项目汇总（进大厂必备）](https://zhuanlan.zhihu.com/p/83911926)
 
 ### github项目
 
