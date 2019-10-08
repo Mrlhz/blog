@@ -1,8 +1,12 @@
 # Promises
 
 - [Promises/A+](https://promisesaplus.com/)
+- [Promise](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Promise A+中文翻译](https://juejin.im/post/5b6161e6f265da0f8145fb72)
-- [https://juejin.im/post/5aa7868b6fb9a028dd4de672](https://juejin.im/post/5aa7868b6fb9a028dd4de672)
+- [Promise原理讲解 && 实现一个Promise对象 (遵循Promise/A+规范)](https://juejin.im/post/5aa7868b6fb9a028dd4de672)
+- [100 行代码实现 Promises/A+ 规范](https://mp.weixin.qq.com/s/qdJ0Xd8zTgtetFdlJL3P1g)
+- [A simple implementation of Promise /A+ Spec](https://github.com/Lucifier129/promise-aplus-impl)
+- [Promise的源码实现（完美符合Promise/A+规范）](https://segmentfault.com/a/1190000018428848)
 
 
 ```js
@@ -18,8 +22,8 @@
 class Promise2 {
   constructor(executor) {
     this.status = 'pending'
-    this.value // 成功
-    this.reason // 失败原因
+    this.value // 成功 任意合法 JS 值
+    this.reason // 指示 promise 为什么被 rejected 的值
     this.resolveCallbacks = []
     this.rejectCallbacks = []
     const resolve = (value) => {
