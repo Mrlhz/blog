@@ -1,43 +1,7 @@
 # Node
 
-
 <details>
-<summary>批量重命名文件</summary>
-
-```js
-
-const fs = require('fs')
-const path = require('path')
-const { writeFile } = require('./writeFile')
-const { padzeros } = require('./padzeros')
-/**
- * @description 批量重命名dir下的文件
- * @param {String} dir 目录路径
- * @param {String} name 文件名
- */
-async function renameFile(dir, name) {
-  const fileList = fs.readdirSync(dir)
-  fileList.forEach((file, index) => {
-    const oldPath = path.join(dir, file)
-    if(fs.statSync(oldPath).isFile()) {
-      const { ext } = path.parse(oldPath)
-      const newName = name + padzeros(index + 1) + ext
-      const newPath = path.join(dir, newName)
-      fs.rename(oldPath, newPath, (err) => {
-        if (err) console.log(err)
-        console.log(`rename complete: ${oldPath} => ${newPath}`)
-      })
-    }
-  })
-}
-
-renameFile('D:/../path', 'test-')
-```
-</details>
-
-
-<details>
-<summary>保存dir文件名到txt文件中</summary>
+<summary></summary>
 
 ```js
 

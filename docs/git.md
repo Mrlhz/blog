@@ -78,8 +78,8 @@ git push origin :refs/tags/[tagname]  # 删除远程标签
 
 ### 合并与衍合
 ```sh
-git merge <branch>
-git rebase <branch>
+git merge <branch>                    # 合并指定分支到当前分支
+git rebase <branch>                   # 衍合指定分支到当前分支
 ```
 
 ### 远程操作
