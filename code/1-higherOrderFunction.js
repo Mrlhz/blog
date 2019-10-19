@@ -29,4 +29,54 @@ let newFn = eat.before(() => {
   console.log('先喝汤')
 })
 
-newFn('--')
+// newFn('--')
+
+// ---
+
+// after 在多少次之后执行
+// 缺陷：after后面只能绑定一次函数
+function after(times, callback) {
+  const arr = []
+  return function (err, res) {
+    if (err) console.log(err)
+    arr.push(res)
+    if (--times === 0) {
+      callback && callback(err, arr)
+    }
+  }
+}
+
+let fn = after(3, function () {
+  console.log('after')
+})
+
+
+// 解决异步问题
+function testAfter() {
+  fn()
+  fn()
+  fn()
+}
+
+function testAfter2() {
+  const fs = require('fs')
+  const path = require('path')
+
+  const afterFn = after(2, function (err, data) {
+    console.log(data)
+  })
+
+  fs.readFile(path.resolve(__dirname, './data/name.txt'), 'utf8', (err, data) => {
+    // setTimeout(() => newFn(err, data), 200)
+    afterFn(err, data)
+  })
+
+  fs.readFile(path.resolve(__dirname, './data/age.txt'), 'utf8', (err, data) => {
+    if (err) console.log(err)
+    afterFn(err, data)
+  })
+}
+
+// run
+// testAfter()
+testAfter2()

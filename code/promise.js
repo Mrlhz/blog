@@ -63,7 +63,54 @@ class Promise2 {
 }
 
 
-const promise = new Promise2((resolve, reject) => {
+class Promise1{
+  constructor(executor) {
+    this.value
+    this.reason
+    this.status = 'pending'
+    this.onResolvedCallbacks = []
+    this.onRejectedCallbacks = []
+    const resolve = (value) => {
+      if (this.status === 'pending') {
+        this.value = value
+        this.status = 'fulfilled'
+        this.onResolvedCallbacks.forEach((callback) => callback())
+      }
+    }
+
+    const reject = (reason) => {
+      if (this.status === 'pending') {
+        this.reason = reason
+        this.status = 'rejected'
+        this.onRejectedCallbacks.forEach((callback) => callback())
+      }
+    }
+
+    try {
+      executor(resolve, reject)
+    } catch (e) {
+      reject(e)
+    }
+  }
+  then (onFulfilled, onRejected) {
+    if (this.status === 'fulilled') {
+      onFulfilled(this.value)
+    }
+    if (this.status === 'rejected') {
+      onRejected(this.reason)
+    }
+    if (this.status === 'pending') {
+      this.onResolvedCallbacks.push(() => {
+        onFulfilled(this.value)
+      })
+      this.onRejectedCallbacks.push(() => {
+        onRejected(this.reason)
+      })
+    }
+  }
+}
+
+const promise = new Promise1((resolve, reject) => {
   console.log(0)
   // resolve(123)
   // reject(456)
@@ -73,7 +120,7 @@ const promise = new Promise2((resolve, reject) => {
   // }, 1500)
 
   setTimeout(() => {
-    reject('失败')
+    resolve('why')
   }, 1500)
 
   // setTimeout(() => {

@@ -29,6 +29,7 @@ e.on(function (arr) {
 })
 
 fs.readFile('./data/name.txt', 'utf8', (err, data) => {
+  if (err) console.log(err)
   e.emit(data)
 })
 
