@@ -80,3 +80,12 @@
 - [imooc的echarts入门教程]( http://www.imooc.com/view/687)
 - [liuyubobobo-algorithms](https://github.com/19920625lsg/liuyubobobo-algorithms)
 - [algorithm-base-ts](https://github.com/weiavia/algorithm-base-ts)
+
+
+### 周刊
+
+- [由腾讯IVWEB出品的《IVWEB技术周刊》](https://github.com/iv-web/weekly)
+- [阿里云前端技术周刊](https://github.com/aliyunfe/weekly)
+- [百度FEX](http://fex.baidu.com/weekly/)
+- [奇舞周刊](https://weekly.75team.com/)
+- [前端精读周刊](https://github.com/dt-fe/weekly)
