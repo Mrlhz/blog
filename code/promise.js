@@ -11,8 +11,11 @@ const pending = 'pending'
 const fulfilled = 'fulfilled'
 const rejected = 'rejected'
 
+function isPromise(obj) {
+  return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
+}
+
 function resolvePromise(promise2, x, resolve, reject) {
-  // console.log(promise2, 'resolve')
   // https://promisesaplus.com/
   // 2.3.1
   if (promise2 === x) {
@@ -27,11 +30,11 @@ function resolvePromise(promise2, x, resolve, reject) {
       if (typeof then === 'function') {
         then.call(x, (y) => {
           // resolve(y)
-          if (called) return  // 1)
+          if (called) return // 1)
           called = true
           resolvePromise(promise2, y, resolve, reject)
         }, (r) => {
-          if (called) return  // 2)
+          if (called) return // 2)
           called = true
           reject(r)
         })
@@ -39,7 +42,7 @@ function resolvePromise(promise2, x, resolve, reject) {
         resolve(x) // { then: () => {} }
       }
     } catch (e) {
-      if (called) return  // 3) 为了辨别这个promise 不能调用多次
+      if (called) return // 3) 为了辨别这个promise 不能调用多次
       called = true
       reject(e)
     }
@@ -58,7 +61,7 @@ class Promise1 {
     this.onRejectedCallbacks = []
     const resolve = (value) => {
       if (value instanceof Promise1) {
-        return value.then(resolve, reject)
+        return value.then(resolve, reject) // resolve的结果是一个promise
       }
       if (this.status = pending) {
         this.value = value
@@ -145,6 +148,68 @@ class Promise1 {
 
     return promise2
   }
+
+  catch (errCallback) {
+    return this.then(null, errCallback)
+  }
+
+  static resolve(value) {
+    return new Promise1((resolveCallback) => {
+      resolveCallback(value)
+    })
+  }
+
+  static reject(reason) {
+    return new Promise1((resolveCallback, rejectCallback) => {
+      rejectCallback(reason)
+    })
+  }
+
+  static all(values) {
+    return new Promise1((resolve, reject) => {
+      const result = []
+      let index = 0
+      const setData = (key, value) => {
+        result[key] = value
+        if (++index === values.length) resolve(result)
+      }
+  
+      for (let i = 0; i < values.length; i++) {
+        let currnet = values[i]
+        if (isPromise(currnet)) {
+          currnet.then((y) => {
+            setData(i, y)
+          }, reject)
+        } else {
+          setData(i, currnet)
+        }
+      }
+    })
+  }
+
+  static race(values) {
+    return new Promise1((resolve, reject) => {
+      for (let i = 0; i < values.length; i++) {
+        let currnet = values[i]
+        if (isPromise(currnet)) {
+          currnet.then(resolve, reject)
+        } else {
+          resolve(currnet)
+        }
+      }
+    })
+  }
+
+  finally(callback) {
+    return this.then((data) => {
+      return Promise1.resolve(callback()).then(() => data)
+    }, (e) => {
+      return Promise1.resolve(callback()).then(() => {
+        throw e
+      })
+    })
+  }
+
 }
 
 module.exports = Promise1
