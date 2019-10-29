@@ -24,8 +24,34 @@ function isSorted(array) {
   return true
 }
 
+/**
+ * @description 生成近乎有序的数组
+ * @see https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+ * @param {number} n 数组长度
+ * @param {number} swapTimes 交换元素的个数
+ */
+function generateNearlyOrderedArray(n, swapTimes) {
+  const array = []
+  for (let i = 0; i < n; i++) {
+    array[i] = i
+  }
+
+  for (let j = 0; j < swapTimes; j++) {
+    let posx = Math.floor(Math.random() * n)
+    let posy = Math.floor(Math.random() * n); // 不加分号后果很严重 
+
+    // [array[posx], array[posy]] = [array[posy], array[posx]]
+    swap(array, posx, posy)
+  }
+  return array
+}
+
+function swap(array, x, y) {
+  [array[x], array[y]] = [array[y], array[x]]
+}
 
 module.exports = {
   generateRandomArray,
+  generateNearlyOrderedArray,
   isSorted
 }

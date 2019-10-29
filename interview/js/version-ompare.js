@@ -22,9 +22,8 @@ function versionCompare(versions) {
   for (let i = 0; i < len; i++) {
     const a = t1[i] ? t1[i] : 0
     const b = t2[i] ? t2[i] : 0
-    if (a === b) {
-      continue
-    } else if(a > b){
+    if (a === b) continue
+    if (a > b) {
       n = 0
       break
     } else {
@@ -33,7 +32,7 @@ function versionCompare(versions) {
     }
   }
   console.log(n)
-  console.log(`版本号[ ${versions[n]} ]更大`)
+  console.log(`版本号 [ ${versions[n]} ] 更大`)
 }
 
 const versions1 = ['1.20.3a', '1.2.3b']
