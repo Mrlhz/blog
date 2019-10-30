@@ -25,8 +25,11 @@ function selectionSort(array) {
 
 
 
-const array = generateRandomArray(10, 1, 100)
+const array = generateRandomArray(10000, 1, 10000)
+
+console.time('selectionSort')
 let sortArray = selectionSort(array)
+console.timeEnd('selectionSort')
 
 console.log(isSorted(sortArray))
 console.log(sortArray)

@@ -50,8 +50,22 @@ function swap(array, x, y) {
   [array[x], array[y]] = [array[y], array[x]]
 }
 
+function before(fn, name, array) {
+  return () => {
+    console.time(name)
+    const res = fn(array)
+    console.timeEnd(name)
+    return res
+  }
+}
+
+function after(fn, name) {
+  
+}
+
 module.exports = {
   generateRandomArray,
   generateNearlyOrderedArray,
-  isSorted
+  isSorted,
+  before
 }

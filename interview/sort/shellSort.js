@@ -33,18 +33,25 @@ function removeDuplicates(str) {
 removeDuplicates('abbaca')
 
 
-function frequencySort(str) {
+function frequencySort(s) {
+  console.time('t');
   const map = {}
-  for (let i = 0; i < str.length; i++) {
-    let e = str[i]
-    map[e] ? map[e].push(e) : map[e] = [e]
+  let len = s.length
+  for (let i = 0; i < len; i++) {
+    let e = s[i]
+    map[e] ? map[e]++ : map[e] = 1
   }
-  
-  const sort = {}
-  Object.keys(map).forEach((key) => {
-    sort[map[key].length] = key
-  })
-  console.log(sort);
+
+  const sort = []
+
+  for (const [key, value] of Object.entries(map)) {
+    sort[value] ? sort[value] = sort[value] + key.repeat(value) :
+      sort[value] = key.repeat(value)
+  }
+  console.timeEnd('t');
+  return sort.reverse().join('')
 }
 
 frequencySort('tree')
+frequencySort('cccaaa')
+frequencySort('Aabb')

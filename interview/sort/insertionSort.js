@@ -18,7 +18,7 @@ function insertionSort1(array) {
 
 
 function insertionSort() {
-  console.time('t')
+  // console.time('insertionSort')
   const len = array.length
   for (let i = 1; i < len; i++) {
     // 寻找元素array[i]合适的插入位置
@@ -29,12 +29,15 @@ function insertionSort() {
     }
     array[j] = e
   }
-  console.timeEnd('t')
+  // console.timeEnd('insertionSort')
   return array
 }
 
-const array = generateRandomArray(10, 1, 100)
+const array = generateRandomArray(100000, 1, 10000)
+
+console.time('insertionSort')
 let sortArray = insertionSort(array)
+console.timeEnd('insertionSort')
 
 console.log(isSorted(sortArray))
 console.log(sortArray)

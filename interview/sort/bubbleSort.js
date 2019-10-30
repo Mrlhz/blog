@@ -17,7 +17,10 @@ function bubbleSort(array) {
 }
 
 const array = generateRandomArray(10, 1, 100)
+
+console.time('bubbleSort')
 let sortArray = bubbleSort(array)
+console.timeEnd('bubbleSort')
 
 console.log(isSorted(sortArray))
 console.log(sortArray)
