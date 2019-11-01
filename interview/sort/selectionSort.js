@@ -1,4 +1,4 @@
-const { generateRandomArray, isSorted } = require('./sortHelper')
+const { generateRandomArray, isSorted, before } = require('./sortHelper')
 
 /**
  * @description 选择排序
@@ -33,3 +33,6 @@ console.timeEnd('selectionSort')
 
 console.log(isSorted(sortArray))
 console.log(sortArray)
+
+let selectionSortFn = before(selectionSort, 'before', generateRandomArray(10000, 1, 10000))
+selectionSortFn()

@@ -60,8 +60,15 @@ function before(fn, name, array) {
 }
 
 function after(fn, name) {
-  
+  return function() {
+    console.log(this === globalThis)
+    console.log(this === global)
+    console.log(arguments);
+  }
 }
+
+let fn = after()
+fn('h')
 
 module.exports = {
   generateRandomArray,
