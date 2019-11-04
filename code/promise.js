@@ -200,6 +200,7 @@ class Promise1 {
     })
   }
 
+  // https://github.com/then/promise/blob/master/src/finally.js
   finally(callback) {
     return this.then((data) => {
       return Promise1.resolve(callback()).then(() => data)
