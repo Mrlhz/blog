@@ -36,6 +36,31 @@ console.log(car1)
 console.log('--')
 console.log(car2)
 
+{
+  function create() {
+    let args = [].slice.call(arguments)
+    const constructor = args.shift()
+  
+    const obj = Object.create({}) // 1
+  
+    Object.setPrototypeOf(obj, constructor.prototype) // 2
+    console.log(args, constructor);
+  
+    const res = constructor.call(obj, ...args) // 3
+  
+    return res instanceof Object ? res : obj // 4 ?
+  }
+  
+  function Car(make, model, year) {
+    this.make = make
+    this.model = model
+    this.year = year
+    // return { name: '返回对象' }
+  }
+  
+  let car2 = create(Car, 'Eagle', 'Talon TSi', 1993)
+  console.log(car2)
+}
 
 
 // 'https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new'
