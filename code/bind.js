@@ -1,7 +1,8 @@
 /**
  * @see https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
  * @see https://github.com/mqyqingfeng/Blog/issues/12
- * @description `bind()方法创建一个新的函数，在bind()被调用时，这个新函数的this被bind的第一个参数指定，其余的参数将作为新函数的参数供调用时使用`
+ * @description 
+ * `bind()方法创建一个新的函数，在bind()被调用时，这个新函数的this被bind的第一个参数指定，其余的参数将作为新函数的参数供调用时使用`
  * `1. bind方法可以绑定this指向，并绑定参数`
  * `2. bind方法返回一个绑定后的函数（高阶函数）`
  * `3. 如果绑定的函数被new，当前函数的this就是当前的实例`

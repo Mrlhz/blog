@@ -16,7 +16,7 @@ Function.prototype.before = function (fn) {
   // this === eat
   const that = this
   return function () {
-    console.log(this === global)
+    console.log(this === global, arguments)
     fn()
     that(...arguments)
   }
@@ -30,7 +30,7 @@ let beforeFn = eat.before(() => {
   console.log('先喝汤')
 })
 
-beforeFn('--')
+beforeFn('--', 'args')
 
 // ---
 

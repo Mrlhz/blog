@@ -10,7 +10,7 @@ class Vue {
 
   observer(value) {
     console.log(value, 'value');
-    if (!value || !isObject(value)) {
+    if (!isObject(value)) {
       console.log('not object')
       return
     }
