@@ -21,7 +21,7 @@ function generateFileDirectory(dir = __dirname, mdFile = 'list.md') {
   })
 }
 
-// generateFileDirectory()
+generateFileDirectory()
 
 
 function copy(obj) {
