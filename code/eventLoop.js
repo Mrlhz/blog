@@ -1,10 +1,20 @@
 // 栈：先进后出
-// 队列：先进先出
+// 队列：先进先出 
 // 执行上下文   作用域(定义)  js静态作用域
 // 立即 resolved 的 Promise 是在本轮事件循环的末尾执行，总是晚于本轮循环的同步任务
 // 28：00
 
 // 浏览器和Node环境 在Node v11 之后是一样的
+
+// node中的nextTick会比promise.resolve.then(() => {}) 快
+{
+  // Promise.resolve().then(() => {
+  //   console.log('then3')
+  // })
+  // process.nextTick(() => {
+  //   console.log('nextTick')
+  // })
+}
 
 function test() {
   setTimeout(() => {
@@ -31,6 +41,26 @@ function test() {
 // then1
 // then3
 // setTimeout2
+
+
+function test1() {
+  Promise.resolve().then(() => {
+    console.log('promise 1')
+    setTimeout(() => {
+      console.log('timeout 1')
+    })
+  })
+
+  setTimeout(() => {
+    Promise.resolve().then(() => {
+      console.log('promise 2')
+    })
+
+    console.log('timeout 2')
+  })
+}
+
+// test1()
 
 function promiseRun() {
   console.log('---------')
@@ -59,11 +89,17 @@ function promiseRun() {
   })
 }
 
+// promiseRun()
 
 function asyncRun() {
   async function async1() {
     console.log('async1 start'); // 2
-    await async2()
+    await async2() // then 了2次
+    // async2().then(() => {
+    //   Promise.resolve().then(() => {
+    //     console.log('async1 end');
+    //   })
+    // })
     console.log('async1 end'); // 6
   }
 
