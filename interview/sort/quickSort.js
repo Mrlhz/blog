@@ -2,6 +2,9 @@ const { generateRandomArray, isSorted } = require('./sortHelper')
 
 /**
  * @description 快速排序
+ * `1. 首先，从数组中选择中间一项作为主元`
+ * `2. 移动左指针直到我们找到一个比主元大的元素，接着，移动右指针直到找到一个比主元小的元素，然后交换它们，重复这个过程，直到左指针超过了右指针`
+ * `3. 接着，算法对划分后的小数组（较主元小的值组成的子数组，以及较主元大的值组成的子数组）重复之前的两个步骤，直至数组已完全排序`
  * @param {array} array
  */
 function quickSort(array) {
@@ -25,7 +28,7 @@ function quick(array, left, right) {
 }
 
 function partition(array, left, right) {
-  let pivot = array[Math.floor((right + left) / 2)]
+  let pivot = array[Math.floor((right + left) / 2)] // 选择中间项作为主元，随机选择一个数组项或是选择中间项
   let i = left
   let j = right
 
@@ -38,6 +41,7 @@ function partition(array, left, right) {
       j--
     }
 
+    // 此时左指针索引没有右指针索引大，左项比右项大
     if (i <= j) {
       [array[i], array[j]] = [array[j], array[i]]
       i++
@@ -45,11 +49,13 @@ function partition(array, left, right) {
     }
   }
 
+  
   return i
 }
 
 
-// const array = generateRandomArray(10000, 1, 10000)
+// const array = generateRandomArray(1000000, 1, 10)
+// const array = generateRandomArray(1000000, 1, 1000000)
 // const array = [8, 7, 6, 5, 4, 3, 2, 1]
 const array = [3, 5, 1, 6, 4, 7, 2]
 

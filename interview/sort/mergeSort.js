@@ -1,10 +1,9 @@
 const { generateRandomArray, generateNearlyOrderedArray, isSorted, before } = require('./sortHelper')
-
 /**
  * @description 归并排序
  * @param {array} array
  */
-function mergeSort(array=[]) {
+function mergeSort(array = []) {
   const len = array.length
   if (len === 1) return array
 
@@ -25,7 +24,7 @@ function merge(left, right) {
   let l = 0
   let r = 0
 
-  while(l < left.length && r < right.length) {
+  while (l < left.length && r < right.length) {
     if (left[l] < right[r]) {
       result.push(left[l++])
     } else {
@@ -33,10 +32,10 @@ function merge(left, right) {
     }
   }
 
-  while(l < left.length) {
+  while (l < left.length) {
     result.push(left[l++])
   }
-  while(r < right.length) {
+  while (r < right.length) {
     result.push(right[r++])
   }
 
@@ -44,8 +43,8 @@ function merge(left, right) {
   return result
 }
 
-const array = generateRandomArray(100000, 1, 100000)
-// const array = [8, 7, 6, 5, 4, 3, 2, 1]
+// const array = generateRandomArray(1000000, 1, 1000000)
+const array = [8, 7, 6, 5, 4, 3, 2, 1]
 // console.time('mergeSort')
 // let sortArray = mergeSort(array)
 // console.timeEnd('mergeSort')
