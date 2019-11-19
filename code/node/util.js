@@ -4,7 +4,7 @@ const path = require('path')
 const util = require('util')
 const promisify = util.promisify
 
-// 
+// promise
 {
   const read = promisify(fs.readFile)
 
@@ -24,4 +24,22 @@ const promisify = util.promisify
 
   fs.readFile(path.resolve(__dirname, '../data/name.txt'), 'utf8')
     .then((data) => console.log(data))
+}
+
+// inherits
+{
+  function Parent() {
+    this.type = 'parent'
+  }
+
+  Parent.prototype.say = function() {
+    console.log('say')
+  }
+
+  function Child() {}
+
+  util.inherits(Child, Parent) // Object.setPrototypeOf(Child.prototype, Parent.prototype)
+  
+  let child = new Child()
+  child.say()
 }

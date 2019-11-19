@@ -30,14 +30,15 @@ Function.prototype.call2 = function(context) {
   for (let i = 1; i < arguments.length; i++) {
     args.push('arguments[' + i + ']')
   }
-  const res = eval('context.fn(' + args + ')')
+  console.log(args, 'arg')
+  const res = eval('context.fn(' + args + ')') // context.fn(arguments[1],arguments[2])
   delete context.fn
   return res
 }
 
 
 Function.prototype.apply2 = function(context, args) {
-  context = context ? context : window
+  context = context ? Object(context) : window
 
   context.fn = this
 
@@ -49,6 +50,26 @@ Function.prototype.apply2 = function(context, args) {
 
 // fn1.call2(fn2, 3, 6) 
 
-// fn1.call2.call2(fn2, 3, 6)
+fn1.call2.call2(fn2, 3, 6)
+fn1.call.call(fn2, 3, 6)
 
-fn1.apply2(fn2, [3, 6])
+var value = 2;
+
+var obj = {
+    value: 1
+}
+
+function bar(name, age) {
+    console.log(this.value)
+    return {
+        value: this.value,
+        name: name,
+        age: age
+    }
+}
+
+bar.call2(null) // 2
+
+console.log(bar.call2(obj, 'kevin', 18));
+
+// fn1.apply2(fn2, [3, 6])
