@@ -5,6 +5,8 @@
  * @return {number}
  */
 function moveZero(nums) {
+  // 时间复杂度 O(n)
+  // 空间复杂度 O(1)
   let k = 0 // 也是不为0的个数
   const len = nums.length
   for (let i = 0; i < len; i++) {
@@ -15,7 +17,6 @@ function moveZero(nums) {
       k++
     }
   }
-
   console.log(nums, k)
   return nums
 }

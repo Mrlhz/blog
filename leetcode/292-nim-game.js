@@ -5,11 +5,13 @@
  * 你们是聪明人，每一步都是最优解。
  * 编写一个函数，来判断你是否可以在给定石头数量的情况下赢得游戏。
  * @see {@link https://leetcode-cn.com/problems/nim-game/}
+ * @see {@link https://leetcode-cn.com/problems/nim-game/solution/nimyou-xi-by-leetcode/}
  * @param {number} n
  * @return {boolean}
  */
 var canWinNim = function(n) {
-  
+  console.log(n % 4 !== 0)
+  return n % 4 !== 0
 }
 
 canWinNim(4) // false
