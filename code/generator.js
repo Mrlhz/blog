@@ -47,7 +47,7 @@
     console.log('c', c)
   }
 
-  let it = log()
+  let it = log() // generator返回的是生成器,生成器有一个next方法，调用这个方法会返回一个对象，对象 {done: 是否迭代完成, value: 产出的结果 }
   it.next() // 第一次调用next时，传参没有任何意义
   it.next(100) // 这次执行会打印a的值， a的值是需要调用next方法传递进去的
   it.next(200)
@@ -71,23 +71,15 @@
   }
 
   let it = read()
-  let {
-    value,
-    done
-  } = it.next()
+  let { value, done } = it.next()
   value.then((data) => {
-    let {
-      value,
-      done
-    } = it.next(data)
+    let { value,  done } = it.next(data)
     console.log(value, done)
     value.then((data) => {
-      let {
-        value,
-        done
-      } = it.next(data)
+      let { value, done } = it.next(data)
       console.log(value, done)
       console.log(data === value)
+      console.log('-----end-----')
     })
   })
 }
@@ -108,10 +100,7 @@
   function co(it) {
     return new Promise((resolve, reject) => {
       function next(r) {
-        let {
-          value,
-          done
-        } = it.next(r)
+        let { value, done } = it.next(r)
         if (!done) {
           Promise.resolve(value).then((r) => {
             next(r)
@@ -128,4 +117,11 @@
   co(read()).then((data) => {
     console.log('co', data)
   })
+
+  // let it = read()
+  // let { value, done } = it.next()
+  // console.log(done, '5');
+  // value.then((data) => {
+  //   console.log('co', data)
+  // })
 }
