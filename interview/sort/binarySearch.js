@@ -9,6 +9,7 @@ function binarySearch(arr = [], target) {
   let right = n - 1
   while (left <= right) {
     let mid = Math.floor(left + (right - left) / 2)
+    // let mid = left + Math.floor((right - left) / 2)
     if (arr[mid] === target) return mid
     if (arr[mid] > target) right = mid - 1
     else {

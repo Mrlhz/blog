@@ -97,6 +97,12 @@
   }
 
   // todo
+  /**
+   * @description co
+   * @see https://github.com/tj/co
+   * @param {function} it
+   * @returns
+   */
   function co(it) {
     return new Promise((resolve, reject) => {
       function next(r) {
