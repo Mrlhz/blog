@@ -1,8 +1,9 @@
 /**
+ * 深拷贝
  * 
  */
 
-function copy(value) {
+function copy(value, hash=new WeakMap()) {
   if (value == null) {
     return value
   }
@@ -14,5 +15,26 @@ function copy(value) {
   }
   // 函数不需要拷贝
   if (typeof value !== 'object') return value
-  
+
+  if (hash.has(value)) return hash.get(value)
+  // 其他情况 对象 数组
+  let instance = new value.constructor
+  hash.set(obj, instance)
+  for (const key in value) {
+    if (value.hasOwnProperty(key)) {
+      instance[key] = copy(value[key], hash)
+    }
+  }
+  console.log(instance)
+  return instance
 }
+
+// test
+let obj = {a:{a:{a:1, fn: function(){}, b: undefined, reg: /\d+/}}}
+
+obj.a = obj // Circular
+
+// let copy1 = JSON.parse(JSON.stringify(obj))
+// console.log(copy1)
+
+let copy2 = copy(obj)
