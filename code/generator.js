@@ -108,9 +108,14 @@
       function next(r) {
         let { value, done } = it.next(r)
         if (!done) {
-          Promise.resolve(value).then((r) => {
-            next(r)
-          })
+          // 1. 
+          // next(value)
+          // 2. 
+          // Promise.resolve(value).then((r) => {
+          //   next(r)
+          // })
+          // 3. 
+          Promise.resolve(value).then(next, reason => reject(reason))
         } else {
           resolve(value)
         }
@@ -126,7 +131,7 @@
 
   // let it = read()
   // let { value, done } = it.next()
-  // console.log(done, '5');
+  // console.log(done, '5')
   // value.then((data) => {
   //   console.log('co', data)
   // })

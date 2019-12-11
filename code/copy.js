@@ -3,7 +3,7 @@
  * 
  */
 
-function copy(value, hash=new WeakMap()) {
+function copy(value, hash = new WeakMap()) {
   if (value == null) {
     return value
   }
@@ -30,7 +30,16 @@ function copy(value, hash=new WeakMap()) {
 }
 
 // test
-let obj = {a:{a:{a:1, fn: function(){}, b: undefined, reg: /\d+/}}}
+let obj = {
+  a: {
+    a: {
+      a: 1,
+      fn: function () {},
+      b: undefined,
+      reg: /\d+/
+    }
+  }
+}
 
 obj.a = obj // Circular
 
