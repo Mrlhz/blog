@@ -75,3 +75,7 @@ jQuery源码解析（DOM与核心模块）|[imooc](https://www.imooc.com/learn/2
 ### Vue.js
 
 - [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
+
+### 
+
+- [backbone源码解读](https://github.com/aircloud/backboneAnalyze)
