@@ -32,7 +32,7 @@ function createReativeObject(target) {
       return isObject(res) ? reactive(res) : res // 递归
     },
     set(target, key, value, receiver) {
-      log('set')
+      log('set', key)
       const hasKey = hasOwn(target, key)
       const oldValue = target[key]
       const res = Reflect.set(target, key, value, receiver)
@@ -75,6 +75,7 @@ function test2() {
   proxy.name.n = 'a'
   reactive(proxy)
   reactive(proxy)
+  console.log(object)
 }
 
 

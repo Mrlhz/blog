@@ -12,14 +12,14 @@ const params = process.argv.slice(2).reduce((acc, cur) => {
 console.log(params)
 
 function mkFile(params) {
-  const { file=Date.now(), link='', desc='', func='_',ext='.js'} = params
+  const { file=Date.now(), link='', desc='', func='_', param='', ext='.js'} = params
   const str =
 `/**
  * @description ${desc}
  * @see {@link ${link}}
  * @return {number}
  */
-function ${func}() {
+function ${func}(${param}) {
 
 }
 `

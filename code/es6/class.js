@@ -1,44 +1,43 @@
 /**
  * @see
  */
-function Animal() {
-  this.type = '哺乳类'
-  this.age = 20
+function Person() {
+  this.type = '人类'
 }
 
-Animal.prototype.say = function () {
+Person.prototype.say = function () {
   console.log('say')
 }
 
-let animal = new Animal()
+let person = new Person()
 
 // 每个对象都有一个 __proto__ 指向所属类的原型
 // 每个原型会有一个constructor 指向所属类
 
-console.log(animal.constructor === Animal)
-console.log(Animal.prototype.__proto__ === Object.prototype)
-console.log(Object.prototype.__proto__)
-console.log(Animal.__proto__ === Function.prototype)
+console.log(person.constructor === Person)
+console.log(Person.prototype.__proto__ === Object.prototype)
+console.log(Object.prototype.__proto__) // null
+console.log(Person.__proto__ === Function.prototype)
 console.log(Function.__proto__ === Function.prototype) // true
 console.log(Function.prototype.__proto__ === Object.prototype) // true
 
 
-function Dog() {
-  Animal.call(this)
+function Student() {
+  Person.call(this)
 }
 
 // 1.
-// Dog.prototype.__proto__ = Animal.prototype
+// Student.prototype.__proto__ = Person.prototype
 
 // 2.
-// Object.setPrototypeOf(Dog.prototype, Animal.prototype)
+// Object.setPrototypeOf(Student.prototype, Person.prototype)
 
 // 3.
-Dog.prototype = Object.create(Animal.prototype, {
+Student.prototype = Object.create(Person.prototype, {
   constructor: {
-    value: Dog
+    value: Student
   }
 })
 
-let dog = new Dog()
-console.log(dog)
+let student = new Student()
+console.log(student)

@@ -15,7 +15,7 @@ function isObject(obj) {
 function setPrototypeOfArray(target) {
   const ArrayPrototype = Array.prototype
   const proto = Object.create(ArrayPrototype);
-  ['push', 'shift', 'unshift'].forEach((method) => {
+  ['push','unshift', 'shift', 'pop', 'reverse', 'sort', 'splice'].forEach((method) => {
     // 函数劫持
     updateView('array') // 切片编程
     proto[method] = function () {
@@ -56,6 +56,7 @@ function defineReactive(target, key, value) {
     },
     set(newValue) {
       if (newValue !== value) {
+        // if (isObject(newValue)) observer(newValue)
         observer(newValue) // [5]
         updateView('set') // [3]
         value = newValue
@@ -97,5 +98,5 @@ let data = {
   version: [1, 2, 3]
 }
 observer(data)
-// data.version.push(4)
+data.version.push(4)
 // log(data.version)

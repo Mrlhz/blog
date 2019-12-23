@@ -4,9 +4,8 @@
  * @param {*} target 目标元素
  */
 function binarySearch(arr = [], target) {
-  let n = arr.length
   let left = 0
-  let right = n - 1
+  let right = arr.length - 1
   while (left <= right) {
     let mid = Math.floor(left + (right - left) / 2)
     // let mid = left + Math.floor((right - left) / 2)

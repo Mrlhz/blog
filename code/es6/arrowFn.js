@@ -16,8 +16,9 @@ let obj = { // let obj = {} 不是作用域
     console.log(this.a, this)
   },
   fn1() {
-    console.log(this.a) // 1
+    console.log(this.a, this === obj) // 1
   }
 }
 
 obj.fn()
+obj.fn1()
