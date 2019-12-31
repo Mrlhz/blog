@@ -8,7 +8,9 @@
 - [Awesomes](https://www.awesomes.cn/)
 - [腾讯云文档平台](https://cloud.tencent.com/document/product)
 - [前端资源分享](https://segmentfault.com/a/1190000014297702)
-
+- [也许是史上最全的前端资源大汇总](https://juejin.im/entry/58ad2fc9b123db00672c965a)
+- [Freely available programming books](https://github.com/EbookFoundation/free-programming-books)
+- [前端资源](https://github.com/iq9891/awesome-frontend)
 
 
 ### css预处理器 SASS

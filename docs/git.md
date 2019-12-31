@@ -48,6 +48,7 @@ git log
 git log -p <file>
 git blame <file>
 git diff --shortstat "@{0 day ago}" # 今天写了多少行代码
+git log --pretty=oneline --abbrev-commit
 ```
 
 ### 撤销
@@ -71,8 +72,11 @@ git branch -d <name>                  # 删除分支
 git push origin --delete <name>       # 删除远程分支
 git tag                               # 列出本地所有标签
 git tag <tagname>                     # 基于最新提交创建标签
-git tag -d <tagname>                  # 删除标签
+git tag -d <tagname>                  # 删除本地标签
+git tag <name> <commit id>            # 根据commit id创建标签
 git push origin :refs/tags/[tagname]  # 删除远程标签
+git push origin <tagname>             # 可以推送一个本地标签
+git push origin --tags                # 可以推送全部未推送过的本地标签
 ```
 
 
