@@ -7,30 +7,45 @@
 // AOP 面向切面编程 把原来代码切成片，在中间加上自己的代码
 // 装饰器 扩展原有的方法 重写原有的方法
 
-function eat(text) {
-  console.log(text)
+function eat(...text) {
+  console.log(...text)
   console.log('后吃饭')
 }
 
-Function.prototype.before = function (fn) {
-  // this === eat
-  const that = this
-  return function () {
-    console.log(this === global, arguments)
-    fn()
-    that(...arguments)
+{
+  Function.prototype.before = function (fn) {
+    const self = this
+    // e.g. self === eat
+    // console.log(self === eat) // true
+    return function (...args) {
+      console.log(this === global, arguments)
+      typeof fn === 'function' && fn()
+      self(...args)
+    }
   }
-  // return (...args) => {
-  //   fn()
-  //   this(args)
-  // }
+
+  let beforeFn = eat.before(() => {
+    console.log('先喝汤')
+  })
+  
+  // beforeFn('--', 'args')
 }
 
-let beforeFn = eat.before(() => {
-  console.log('先喝汤')
-})
-
-beforeFn('--', 'args')
+{
+  Function.prototype.before = function (fn) {
+    return (...args) => {
+      fn()
+      console.log(this === global, args)
+      this(...args)
+    }
+  }
+  
+  let beforeFn = eat.before(() => {
+    console.log('先喝汤')
+  })
+  
+  beforeFn('---', 'args')
+}
 
 // ---
 
