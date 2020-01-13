@@ -59,3 +59,20 @@ typings/
 
 # next.js build output
 .next
+
+
+logs/
+package-lock.json
+coverage/
+.idea/
+run/
+.DS_Store
+*.sw*
+*.un~
+.nyc_output/
+
+yarn.lock
+
+todo.md
+
+test
