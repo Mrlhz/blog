@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>下载图片</title>
+  <style>
+  img {
+    width: 200px;
+  }
+  </style>
+</head>
+
+<body>
+  <img src="https://hbimg.huabanimg.com/aee387e842bf42873384ec44a6717922063c680552298-Gzalha_fw658" />
+  <br />
+  <button class="btn" id="btn">下载图片</button>
+  <script>
+    // https://codepen.io/2214962083/pen/gObBeaM
+    // https://developer.mozilla.org/zh-CN/docs/Web/API/URL/createObjectURL
+    function download(url, fileName) {
+      fetch(url)
+        .then((res) => res.blob())
+        .then((blob) => {
+          console.log(blob)
+          // Blob { size: 78162, type: "image/jpeg" }
+          const a = document.createElement('a')
+          const blobUrl = window.URL.createObjectURL(blob)
+          a.href = blobUrl
+          a.download = fileName
+          a.click()
+          window.URL.revokeObjectURL(blobUrl)
+        })
+    }
+
+    const btn = document.getElementById('btn')
+    btn.onclick = () => download(
+      'https://hbimg.huabanimg.com/aee387e842bf42873384ec44a6717922063c680552298-Gzalha_fw658', '新垣结衣 gakki.png')
+  </script>
+</body>
+
+</html>
