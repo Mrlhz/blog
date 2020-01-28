@@ -10,7 +10,7 @@ let arr = []
 let handler = {
   get(target, key) {
     if (typeof target[key] === 'object') {
-      return new Proxy(target[key], handler)
+      return new Proxy(target[key], handler) // 递归
     }
 
     return Reflect.get(target, key)

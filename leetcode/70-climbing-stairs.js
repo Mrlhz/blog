@@ -14,10 +14,11 @@ function climbStairs(n) {
   dp[1] = 1
   let i = 2
   while (i <= n) {
-    dp[i] = dp[i -1] + dp[i-2]
+    dp[i] = dp[i - 1] + dp[i - 2]
     i++
   }
   console.log(dp[n])
+  return dp[n]
 }
 
 
@@ -25,5 +26,3 @@ let r1 = climbStairs(2)
 let r2 = climbStairs(3)
 climbStairs(5)
 console.log(r1, r2)
-
-
