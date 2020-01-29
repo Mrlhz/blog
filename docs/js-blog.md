@@ -51,7 +51,7 @@
 - [ ] [【进阶4-3期】面试题之如何实现一个深拷贝](https://juejin.im/post/5c62167ce51d450164636d19)
 - [ ] [VUE 3](https://github.com/vuejs/vue-next)
 - [ ] [Vue Composition API](https://vue-composition-api-rfc.netlify.com/)
-
+- [ ] [各种场景唤起 App 骚操作](https://mp.weixin.qq.com/s/eVcCaCGOV7DUiKeg-pl7MA)
 ### 工具
 
 - [印记中文](https://docschina.org/)

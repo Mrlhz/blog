@@ -1,7 +1,7 @@
 
 - [各种手写源码实现](https://mp.weixin.qq.com/s/9xvI37cKpSRFRMhQ2yc_zg)
-
-
+- [2020 大前端冲刺大厂面试题必备（上）](https://mp.weixin.qq.com/s/8GJhks2F-XJPJiAZinzWHQ)
+- [十几道含答案的大厂面试题总结](https://mp.weixin.qq.com/s/dKCtX-S6-UyojTfTiqxNww)
 
 - co实现
 - call、aplly、bind 实现
