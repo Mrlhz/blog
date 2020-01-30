@@ -30,7 +30,7 @@ vuex：
 2. mutations 和action的区别，应用场景
 axios：
 1. 如何取消一个ajax请求
-
+- [abort](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/abort)
 node：
 1. require的实现原理
 2. nodejs fs模块promise
