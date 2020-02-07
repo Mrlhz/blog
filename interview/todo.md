@@ -56,3 +56,6 @@ https://github.com/mqyqingfeng/Blog
 
 ```
 ```
+
+- [H5 是什么？](https://www.zhihu.com/question/30363342/answer/49975308)
+![https://www.jianshu.com/p/739d421cb9aa](https://upload-images.jianshu.io/upload_images/12033627-1d4ace5d95933bb1.jpeg?imageMogr2/auto-orient/strip|imageView2/2/w/835/format/webp)
