@@ -27,3 +27,21 @@ let handler = {
 let proxy = new Proxy(obj, handler)
 proxy.age = {}
 console.log(obj)
+
+{
+  const person = observable({
+    name: '张三',
+    age: 20
+  });
+  
+  function print() {
+    console.log(`${person.name}, ${person.age}`)
+  }
+  
+  observe(print);
+  person.name = '李四';
+  // 输出
+  // 李四, 20
+
+  
+}

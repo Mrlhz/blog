@@ -12,8 +12,9 @@ function new2() {
   // [1]
   const obj = Object.create({}) // {}
   // [2]
-  obj.__proto__ = constructor.prototype
+  // obj.__proto__ = constructor.prototype
   // Object.setPrototypeOf(obj, constructor.prototype)
+  Reflect.setPrototypeOf(obj, constructor.prototype)
   // [3]
   const res = constructor.apply(obj, arguments)
   // [4]
