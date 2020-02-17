@@ -29,6 +29,15 @@ proxy.age = {}
 console.log(obj)
 
 {
+  const tasks = new Set()
+  const observe = fun => tasks.add(fun)
+  const observable = obj => new Proxy(obj, {
+    set(target, property, value, receiver) {
+      tasks.forEach((task) => task())
+      return Reflect.set(target, property, value, receiver)
+    }
+  })
+
   const person = observable({
     name: '张三',
     age: 20
@@ -42,6 +51,16 @@ console.log(obj)
   person.name = '李四';
   // 输出
   // 李四, 20
+}
 
-  
+{
+  let a = new Proxy({}, {
+    i: 0,
+    get() {
+      return () => ++this.i;
+    }
+  })
+  // a == 1 && a == 2 && a == 3
+  console.log(a == 1 && a == 2 && a == 3)
+  console.log(a)
 }

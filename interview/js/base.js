@@ -178,6 +178,7 @@
   /**
    * @index 7
    * @see https://www.bilibili.com/video/av66249907?p=18
+   * @see https://www.jianshu.com/p/0c7fd0c51308
    */
 
   //  var a = ?
@@ -193,7 +194,24 @@
   // var a = [1, 2, 3]
   // a.toString = a.shift
 
+  // ----
+  // let a = [1, 2, 3];
+  // a.join = a.shift;
+
   // 3
+
+  function test() {
+    let v = 0
+    const a = {
+      // valueOf() {
+      //   return ++v;
+      // },
+      toString() {
+        return ++v;
+      }
+    }
+    console.log(a == 1 && a == 2 && a == 3)
+  }
 
   function test() {
     var val = 0;
