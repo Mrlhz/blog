@@ -48,40 +48,8 @@
 {
   /**
    * @description 写一个函数能判断两个对象（注意特殊对象）内包含的内容是否一致
-   * @todo bug
+   * @see https://github.com/mqyqingfeng/Blog/issues/41
+   * @see https://www.lodashjs.com/docs/lodash.eq
+   * @see https://underscorejs.org/#isEqual
    */
-
-  function isObject(obj) {
-    return Object.prototype.toString.call(obj) === "[object Object]"
-  }
-
-  function equals(x, y) {
-    if (!isObject(x) || !isObject(y)) return
-    if (x === y) return true
-    if (Object.keys(x).length !== Object.keys(y).length) return false
-
-    for (const key in x) {
-      // const ele = x[key]
-      const e1 = x[key]
-      const e2 = y[key]
-      if (x.hasOwnProperty(key) && y.hasOwnProperty(key)) {
-
-        if (!isObject(e1) && !isObject(e2)) {
-          return Object.is(e1, e2) // todo 只判断了一个key相等就return true
-        } else if (isObject(e1) && isObject(e2)) {
-          return equals(e1, e2)
-        } else {
-          return false
-        }
-
-      } else {
-        return false
-      }
-
-    }
-  }
-
-
-  const res = equals({ a: 1, b: 2, c: NaN, d: null }, { b: 2, a: 1, c: NaN, d: null })
-  console.log(res)
 }
