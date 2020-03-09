@@ -1,4 +1,5 @@
 import { observe } from './index'
+import { arrayMethods, observerArray } from './array'
 
 export function defineReactive (data, key, value) {
 
@@ -23,8 +24,12 @@ export function defineReactive (data, key, value) {
 class Observer {
   constructor(data) {
     this.data = data
-
-    this.walk(data)
+    if (Array.isArray(data)) {
+      Object.setPrototypeOf(data, arrayMethods)
+      observerArray(data)
+    } else {
+      this.walk(data)
+    }
   }
 
   walk (data) {
