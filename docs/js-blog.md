@@ -52,6 +52,10 @@
 - [ ] [VUE 3](https://github.com/vuejs/vue-next)
 - [ ] [Vue Composition API](https://vue-composition-api-rfc.netlify.com/)
 - [ ] [各种场景唤起 App 骚操作](https://mp.weixin.qq.com/s/eVcCaCGOV7DUiKeg-pl7MA)
+- [ ] [我是如何让公司后台管理系统焕然一新的(上) -性能优化](https://juejin.im/post/5c76843af265da2ddd4a6dd0)
+- [ ] [字节跳动面试官：请你实现一个大文件上传和断点续传](https://juejin.im/post/5dff8a26e51d4558105420ed)
+- [ ] [京东大咖实战分享：小程序性能优化实践](https://mp.weixin.qq.com/s/Iz3FheStNj6B_Al1bjErYg)
+- [x] [论一个倒计时器的性能优化之路](https://blog.joouis.com/2018/05/25/optimization-road-of-count-down-timer/)
 ### 工具
 
 - [印记中文](https://docschina.org/)
