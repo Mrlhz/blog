@@ -37,6 +37,7 @@ git add <file>
 git mv <old> <new>                # 文件改名
 git rm <file>
 git rm --cached <file>
+git rm -r folder                  # 删除文件夹
 git commit -m "commit message"
 git commit --amend                # 修改最后一次提交，合并上一次提交
 git commit -am "commit message"   # add 与 commit 合并为一步

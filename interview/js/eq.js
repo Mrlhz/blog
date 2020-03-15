@@ -1,4 +1,11 @@
-
+/**
+ * @description 比较两者的值，来确定它们是否相等
+ *
+ * @param {*} value
+ * @param {*} other
+ * @returns
+ * @todo 循环引用、不同构造函数的对象
+ */
 function eq (value, other) {
 
   // null
@@ -9,7 +16,8 @@ function eq (value, other) {
 
   // NaN
   // if (value !== value) return other !== other
-  if (value !== value) return other !== other
+  // if (value !== value) return other !== other
+  if (Number.isNaN(value)) return Number.isNaN(other)
 
   // value 为基本类型 other 为function
   const type = typeof value
@@ -52,7 +60,6 @@ function deepEq (value, other) {
       if (!eq(value[length], other[length])) return false
     }
   } else {
-    // console.log('do')
     const keys = Object.keys(value)
     let key
     let length = keys.length
@@ -80,7 +87,7 @@ function deepEq (value, other) {
 const object = { 'a': 1, 'b': { c: { e: 4 } }, d: 3 };
 const other = { 'a': 1, 'b': { c: 2 }, d: 3 };
 // const other = { 'a': 1, 'b': { c: 2 } };
-// eq(object, other)
+eq(object, other)
 console.log(res, i)
 // console.log(eq(object, other), 'eq')
 

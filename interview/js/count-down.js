@@ -94,16 +94,16 @@ class CountDown {
     const m = 1000 * 60
     const s = 1000
 
-    let day = Math.floor(spanTime / d)
+    let days = Math.floor(spanTime / d)
 
-    let hours = Math.floor(spanTime / h)
+    let hours = Math.floor((spanTime - days * d) / h)
 
-    let minutes = Math.floor((spanTime - hours * h) / m)
+    let minutes = Math.floor((spanTime - days * d - hours * h) / m)
 
-    let seconds = Math.floor((spanTime - hours * h - minutes * m) / s)
+    let seconds = Math.floor((spanTime - days * d - hours * h - minutes * m) / s)
 
     Object.assign(this.time, {
-      day,
+      days,
       hours,
       minutes,
       seconds
@@ -135,12 +135,12 @@ class CountDown {
 const c = new CountDown(new Date(), '2020/03/14 00:00:00')
 
 c.init((t) => {
-  const { day, hours, minutes, seconds } = t
-  // console.log(day, hours, minutes, seconds)
+  const { days, hours, minutes, seconds } = t
+  // console.log(days, hours, minutes, seconds)
   if (parseInt(hours) + parseInt(minutes) + parseInt(seconds) === 0) {
     console.log('时间到', new Date())
   } else {
-    console.log( `${hours}:${minutes}:${seconds}`, new Date())
+    console.log( `${days}天 ${hours}:${minutes}:${seconds}`, new Date())
   }
   
 })

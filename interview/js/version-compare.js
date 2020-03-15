@@ -4,6 +4,7 @@
  * `如 1.2.3a 和 1.2.4b 比较，后者版本号更大，`
  * `请考虑各种情况，不可以使用系统提供的比较函数。`
  * @param {Array} versions
+ * @todo https://juejin.im/post/5d7f62e4f265da038f484024
  */
 function versionCompare(versions) {
   if (versions[0] === versions[1]) return

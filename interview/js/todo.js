@@ -89,29 +89,27 @@
    * @see https://www.lodashjs.com/docs/lodash.eq
    * @see https://underscorejs.org/#isEqual
    */
+}
 
-  function eq (value, other) {
 
-    // null
-    if (value == null || other === null) return false
+{
+  function _(arr) {
+    let len = arr.length
+    // console.log(len)
 
-    //  +0 -0
-    if (value === other) return value !== 0 || 1 / value === 1 / other
-
-    // NaN
-    // if (value !== value) return other !== other
-    if (+value !== +value) return +other !== +other
-
-    // value 为基本类型 other 为function
-    const type = typeof value
-    if (['function', 'object'].indexOf(type) < 0 && typeof other !== 'object') return false
-
-    // deepEq
-
-    return deepEq(value, other)
+    while (len--) {
+      console.log(len)
+    }
   }
 
-  function deepEq (value, other) {
+  _([1,2,3,4])
+}
 
+{
+  const camelizeRE = /-(\w)/g
+  const camelize = (str) => {
+    return str.replace(camelizeRE, (_, c) => c ? c.toUpperCase() : '')
   }
+
+  console.log(camelize('hello-world'))
 }

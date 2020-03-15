@@ -10,10 +10,7 @@ const filePath = path.resolve('C:\\Users\\l\\Desktop\\面试\\掌众科技', '3.
  */
 class LogAnalysis {
   constructor() {
-    const {
-      data,
-      length
-    } = this.init()
+    const { data, length } = this.init()
     this.data = data
     this.length = length
     this.filterList = null
@@ -25,7 +22,7 @@ class LogAnalysis {
         encoding: 'utf8'
       }) // string
 
-      const data = stringData.split('\n').map((item) => item.split(','))
+      const data = stringData.split('\n').map((item) => item.split(',')) // to array
 
       return {
         data,
