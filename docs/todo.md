@@ -29,6 +29,17 @@
 - [ ] [剖析一些经典的CSS布局问题，为前端开发+面试保驾护航](https://juejin.im/post/5da282015188257d2a1c9e1d)
 - [ ] [如何衡量一个人的 JavaScript 水平？](https://juejin.im/post/5dff94a2e51d455813089976)
 - [ ] [12道vue高频原理面试题,你能答出几道?](https://juejin.im/post/5e04411f6fb9a0166049a073)
+- [ ] [如何快速搭建一个功能齐全中后台前端框架？](https://juejin.im/post/5e564023f265da57213f0002)
+- [ ] [面试题：说说事件循环机制(满分答案来了)](https://juejin.im/post/5e5c7f6c518825491b11ce93)
+- [ ] [避坑指南☝️ | 那些年我们踩过的技术坑](https://juejin.im/post/5e58b7f2e51d45271515608d)
+- [ ] [要就来45道Promise面试题一次爽到底(1.1w字用心整理)](https://juejin.im/post/5e58c618e51d4526ed66b5cf)
+- [ ] [记好这 24 个 ES6 方法，用来解决实际开发的 JS 问题](https://juejin.im/post/5e5ef2f9f265da57685dc9c1)
+- [ ] [二月前端实战面试](https://juejin.im/post/5e61c161518825493e5353d1)
+- [ ] [2020面试，已拿到头条跟阿里offer](https://juejin.im/post/5e6b05116fb9a07cb83e39c6)
+- [ ] [吃透 Vue 项目开发实践｜16个方面深入前端工程化开发技巧《下》](https://juejin.im/post/5e1eb1dff265da3e354ea2d0)
+- [ ] [2019年度最常见的JavaScript面试题和答案](https://juejin.im/post/5e68a534f265da572f142a51)
+- [x] [npm版本管理-语义化版本规范(Semantic Versioning)](https://zhuanlan.zhihu.com/p/35006708)
+- [ ] [一道常被人轻视的前端JS面试题](https://www.cnblogs.com/xxcanghai/p/5189353.html)
 
 ### Node.js
 

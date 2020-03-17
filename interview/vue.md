@@ -7,3 +7,20 @@
 - 说说 Vue 的渲染过程
 - Vue 响应式原理
 - 谈谈 Vue 事件机制,手写$on,$off,$emit,$once
+
+
+- 请说一下相应数据的原理
+
+1. `Object.defineProperty`
+2. 
+
+
+- [【面试题解析】从 Vue 源码分析 key 的作用](https://juejin.im/post/5e6e2348f265da57424ba664)
+> key 主要是应用在 Diff 算法中，作用是为了更快速定位出相同的新旧节点，尽量减少 DOM 的创建和销毁的操作
+
+
+- computed 与 watch
+
+> 计算属性的结果会被缓存，除非依赖的响应式属性变化才会重新计算
+> 与computed的区别是，watch更加适用于监听某一个值的变化并做对应的操作，比如请求后台接口等，而computed适用于计算已有的值并返回结果
+> 不要在computed和watch中修改被依赖(或者被监听)的值，这样可能会导致无限循环
