@@ -104,6 +104,7 @@ module.exports = {
       chunks: ['example'],
       favicon: 'favicon.ico'
     }),
+    // 抽离css为单独文件
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
       chunkFilename: '[id].[hash].css'

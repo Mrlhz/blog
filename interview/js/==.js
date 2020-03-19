@@ -1,4 +1,5 @@
 /**
+ * @see https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#非严格相等
  * @see https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators
  * @see https://www.bilibili.com/video/av66249907?p=18
  * == 比较，左右两边数据类型不一样，则先转换为相同数据类型再进行比较

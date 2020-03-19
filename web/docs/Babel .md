@@ -1,4 +1,11 @@
 
+- [Babel使用指南](https://www.babeljs.cn/docs/usage)
+
+```shell
+# npx babel [源文件目录] -d [编译目录]
+npx babel src -d src-test
+```
+
 
 - [@babel/plugin-transform-runtime](https://babeljs.io/docs/en/babel-plugin-transform-runtime#docsNav)
 
