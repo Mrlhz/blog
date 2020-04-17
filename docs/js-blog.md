@@ -56,6 +56,11 @@
 - [ ] [字节跳动面试官：请你实现一个大文件上传和断点续传](https://juejin.im/post/5dff8a26e51d4558105420ed)
 - [ ] [京东大咖实战分享：小程序性能优化实践](https://mp.weixin.qq.com/s/Iz3FheStNj6B_Al1bjErYg)
 - [x] [论一个倒计时器的性能优化之路](https://blog.joouis.com/2018/05/25/optimization-road-of-count-down-timer/)
+- [ ] [如何提问](http://t.cn/RxmfEl8)
+- [ ] [如何有条理地提问](http://t.cn/RIu8Lol)
+- [ ] [提问的智慧](http://t.cn/R5qGYwV)
+
+
 ### 工具
 
 - [印记中文](https://docschina.org/)
