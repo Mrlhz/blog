@@ -59,7 +59,10 @@
 - [ ] [如何提问](http://t.cn/RxmfEl8)
 - [ ] [如何有条理地提问](http://t.cn/RIu8Lol)
 - [ ] [提问的智慧](http://t.cn/R5qGYwV)
-
+- [ ] [一位前端小姐姐的五万字面试宝典](https://juejin.im/post/5e91b01651882573716a9b23)
+- [ ] [十道大厂面试题(含答案)总结](https://juejin.im/post/5e97fe876fb9a03c2e542c1e)
+- [ ] [《前端那些事》从0到1开发工具库](https://juejin.im/post/5e958d0f6fb9a03c6675cb5d)
+- [ ] [壹题汇总](https://muyiy.cn/question/)
 
 ### 工具
 
