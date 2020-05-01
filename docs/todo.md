@@ -40,6 +40,8 @@
 - [ ] [2019年度最常见的JavaScript面试题和答案](https://juejin.im/post/5e68a534f265da572f142a51)
 - [x] [npm版本管理-语义化版本规范(Semantic Versioning)](https://zhuanlan.zhihu.com/p/35006708)
 - [ ] [一道常被人轻视的前端JS面试题](https://www.cnblogs.com/xxcanghai/p/5189353.html)
+- [ ] [救救自己，别再这样写简历了｜掘金技术征文](https://juejin.im/post/5ea59d91518825736512f3b8)
+- [ ] [你可能还不知的 7 个 CSS 好用的属性](https://juejin.im/post/5ea8c37fe51d454dc55c8de7)
 
 ### Node.js
 
