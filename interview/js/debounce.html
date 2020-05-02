@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>debounce</title>
+</head>
+
+<body>
+  <input type="text" id="searchInput">
+  <script>
+
+    const searchInput = document.getElementById('searchInput')
+
+    const searchValue = searchInput.value
+
+    searchInput.addEventListener('keyup', (e) => {
+
+      // console.log(e.target.value)
+      debounce(function ()  {
+        const result = data.filter((item) => {
+        item.includes(keyword)
+      })
+
+        console.log(result)
+      }, 200)
+    })
+
+    const data = [
+      'apple',
+      'banana'
+    ]
+    function debounce(fn, wait) {
+
+      let timeout
+      return function () {
+        clearTimeout(timeout)
+        timeout = setTimeout(fn, wait)
+      }
+
+    }
+
+
+    function search(keyword = 'apple') {
+      const result = data.filter((item) => {
+        item.includes(keyword)
+      })
+
+      console.log('result', result)
+    }
+
+    debounce(search, 3000)
+  </script>
+</body>
+
+</html>
