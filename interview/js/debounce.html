@@ -15,36 +15,40 @@
 
     const searchValue = searchInput.value
 
-    searchInput.addEventListener('keyup', (e) => {
+    // const searchFn = debounce(function (keyword) {
+    //   search(keyword)
+    // }, 1000)
 
-      // console.log(e.target.value)
-      debounce(function ()  {
-        const result = data.filter((item) => {
-        item.includes(keyword)
-      })
+    searchInput.addEventListener('keyup', function(e) {
 
-        console.log(result)
-      }, 200)
-    })
+      console.log(e.target.value, 'value')
+      const searchFn = debounce(function () {
+        search(e.target.value)
+      }, 1000)
 
-    const data = [
-      'apple',
-      'banana'
-    ]
+      searchFn()
+    }, false)
+
     function debounce(fn, wait) {
 
       let timeout
       return function () {
+        if (timeout) return false
         clearTimeout(timeout)
         timeout = setTimeout(fn, wait)
       }
 
     }
 
-
-    function search(keyword = 'apple') {
+    const data = [
+      'apple',
+      'banana'
+    ]
+    function search(keyword) {
+      // console.log(keyword)
       const result = data.filter((item) => {
-        item.includes(keyword)
+        console.log(item, keyword, 3)
+        return item.includes(keyword)
       })
 
       console.log('result', result)
