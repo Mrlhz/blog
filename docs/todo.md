@@ -42,6 +42,8 @@
 - [ ] [一道常被人轻视的前端JS面试题](https://www.cnblogs.com/xxcanghai/p/5189353.html)
 - [ ] [救救自己，别再这样写简历了｜掘金技术征文](https://juejin.im/post/5ea59d91518825736512f3b8)
 - [ ] [你可能还不知的 7 个 CSS 好用的属性](https://juejin.im/post/5ea8c37fe51d454dc55c8de7)
+- [ ] [LeetCode按照怎样的顺序来刷题比较好？](https://www.zhihu.com/question/36738189/answer/864005192)
+- [ ] [使用 Vue + Markdown 完成的一个在线 Markdown 简历项目——1024 RESUME](https://juejin.im/post/5eaf408e5188256d83467ce0)
 
 ### Node.js
 
