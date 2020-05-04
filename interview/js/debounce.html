@@ -10,51 +10,41 @@
 <body>
   <input type="text" id="searchInput">
   <script>
+    const dataString = 'each:map:reduce:reduceRight:find:filter:where:findWhere:reject:every:some:contains:invoke:pluck:max:min:sortBy:groupBy:indexBy:countBy:shuffle:sample:toArray:size:partition:first:initial:last:rest:compact:flatten:without:union:intersection:difference:uniq:zip:unzip:object:chunk:indexOf:lastIndexOf:sortedIndex:findIndex:findLastIndex:range:bind:bindAll:partial:memoize:delay:defer:throttle:debounce:once:after:before:wrap:negate:compose:restArguments:keys:allKeys:values:mapObject:pairs:invert:create:object-functions:findKey:extend:extendOwn:pick:omit:defaults:clone:tap:has:property:propertyOf:matcher:isEqual:isMatch:isEmpty:isElement:isArray:isObject:isArguments:isFunction:isString:isNumber:isFinite:isBoolean:isDate:isRegExp:isError:isSymbol:isMap:isWeakMap:isSet:isWeakSet:isNaN:isNull:isUndefined:noConflict:identity:constant:noop:times:random:mixin:iteratee:uniqueId:escape:unescape:result:now:template:chain:value'
 
+    const data = dataString.split(':')
     const searchInput = document.getElementById('searchInput')
 
-    const searchValue = searchInput.value
+    function searchValue() {
+      return searchInput.value.trim().replace(/^_\.?/, '')
+    }
 
-    // const searchFn = debounce(function (keyword) {
-    //   search(keyword)
-    // }, 1000)
 
-    searchInput.addEventListener('keyup', function(e) {
+    searchInput.addEventListener('keyup', debounce(doesMatch, 1000), false)
 
-      console.log(e.target.value, 'value')
-      const searchFn = debounce(function () {
-        search(e.target.value)
-      }, 1000)
+    function doesMatch(e) {
+      const value = searchValue()
+      if (!value) return
+      const result = data.filter((name) => name.includes(value))
+      console.log(e.target.value, value)
+      console.log(`result: ${result}`)
+    }
 
-      searchFn()
-    }, false)
+    function debounce(func, wait) {
+      console.log('debounce init')
+      let timeout;
 
-    function debounce(fn, wait) {
-
-      let timeout
       return function () {
-        if (timeout) return false
+        let context = this
+        let args = arguments
+
         clearTimeout(timeout)
-        timeout = setTimeout(fn, wait)
+        timeout = setTimeout(function () {
+          func.apply(context, args)
+        }, wait)
       }
-
     }
-
-    const data = [
-      'apple',
-      'banana'
-    ]
-    function search(keyword) {
-      // console.log(keyword)
-      const result = data.filter((item) => {
-        console.log(item, keyword, 3)
-        return item.includes(keyword)
-      })
-
-      console.log('result', result)
-    }
-
-    debounce(search, 3000)
+    
   </script>
 </body>
 
