@@ -44,6 +44,19 @@
 - [ ] [你可能还不知的 7 个 CSS 好用的属性](https://juejin.im/post/5ea8c37fe51d454dc55c8de7)
 - [ ] [LeetCode按照怎样的顺序来刷题比较好？](https://www.zhihu.com/question/36738189/answer/864005192)
 - [ ] [使用 Vue + Markdown 完成的一个在线 Markdown 简历项目——1024 RESUME](https://juejin.im/post/5eaf408e5188256d83467ce0)
+- [ ] [这份nodejs实现的定时爬取微博热搜程序，请查收！](https://juejin.im/post/5ead36f75188256d7674a024)
+- [ ] [6个宝藏级Vue管理后台框架 必须收藏](https://zhuanlan.zhihu.com/p/91825869)
+- [ ] [20个新的且值得关注的 Vue.js 开源项目会飞的猪](https://zhuanlan.zhihu.com/p/97308125)
+- [ ] [vue插件总结——总有你能用上的插件](https://zhuanlan.zhihu.com/p/95757799)
+- [ ] [计算机基础面试题小计](https://q.shanyue.tech/base/)
+- [ ] [前端大厂面经大全集](https://q.shanyue.tech/interview.html)
+- [ ] [前端面试题小记](https://q.shanyue.tech/fe/)
+- [ ] [2019年最新经典web前端面试题超全面细节](https://juejin.im/post/5db1bdc851882564973bd85e)
+- [ ] []()
+- [ ] []()
+- [ ] []()
+- [ ] []()
+
 
 ### Node.js
 
