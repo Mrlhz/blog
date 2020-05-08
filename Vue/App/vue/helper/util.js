@@ -3,6 +3,13 @@ export function isObject(obj) {
   return typeof obj === 'object' && obj !== null
 }
 
+export function query(el) {
+  if (typeof el === 'string') {
+    return document.querySelector(el)
+  }
+  return el
+}
+
 /**
  * @description 取值
  * vm vm._data: { info: { name: 'lhr' } }

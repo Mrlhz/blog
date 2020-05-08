@@ -1,5 +1,7 @@
 let id = 0 // 每次产生一个watcher，都要有给一个唯一的标识
 
+import { pushTarget, popTarget } from './dep'
+
 class Watcher {
   /**
    * @description Creates an instance of Watcher.
@@ -15,8 +17,12 @@ class Watcher {
       exprOrFn,
       cb,
       options,
-      id: id++
+      id: id++,
+      deps: []
     })
+
+    this.depsId = new Set()
+      
     
     if (typeof exprOrFn === 'function') {
       this.getter = exprOrFn
@@ -32,8 +38,26 @@ class Watcher {
   }
 
   get () {
+    pushTarget(this) // 渲染watcher Dep.target = watcher msg变化了，需要让这个watcher重新执行
+
     this.getter()
+
+    popTarget()
   }
+
+  addDep(dep) {
+    const id = dep.id
+    if (!this.depsId.has(id)) {
+      this.depsId.add(id)
+      this.depsId.push(dep)
+      dep.addSub(this) // this Watcher 当前实例
+    }
+  }
+
+  update() {
+    this.get()
+  }
+
 }
 
 

@@ -1,14 +1,18 @@
 import { observe } from './index'
 import { arrayMethods, observerArray } from './array'
+import Dep from './dep'
 
 export function defineReactive (data, key, value) {
 
   // [1] 递归
   observe(value)
 
+  const dep = new Dep()
+
   Object.defineProperty(data, key, {
     get () {
       console.log('get')
+      if (Dep.target) dep.addSub(Dep.target)
       return value
     },
     set (newValue) {
@@ -17,6 +21,7 @@ export function defineReactive (data, key, value) {
       observe(newValue)
       console.log('set')
       value = newValue
+      dep.notify()
     }
   })
 }

@@ -1,5 +1,5 @@
 import { initState } from './observe/index'
-import { compiler } from './helper/util'
+import { compiler, query } from './helper/util'
 import Watcher from './observe/watcher'
 
 function Vue(options) {
@@ -17,13 +17,6 @@ Vue.prototype.init = function (options) {
     vm.$mount()
   }
 
-}
-
-function query(el) {
-  if (typeof el === 'string') {
-    return document.querySelector(el)
-  }
-  return el
 }
 
 Vue.prototype.update = function () {
