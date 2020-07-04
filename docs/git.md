@@ -65,11 +65,13 @@ git reset --soft HEAD^                # 撤销commit
 ### 分支与标签
 ```sh
 git branch                            # 查看分支
+git branch -a                         # 查看远程分支git
 git branch <name>                     # 创建分支
 git checkout <name>                   # 切换分支
 git checkout -b <name>                # 创建+切换分支
 git merge <name>                      # 合并某分支到当前分支
 git branch -d <name>                  # 删除分支
+git push origin <name>                # 推送远程分支
 git push origin --delete <name>       # 删除远程分支
 git tag                               # 列出本地所有标签
 git tag <tagname>                     # 基于最新提交创建标签

@@ -56,8 +56,10 @@
 - [ ] [前端进阶算法7：小白都可以看懂的树与二叉树](https://juejin.im/post/5eb97911f265da7b9d50d673)
 - [ ] [可视化的 js：动态图演示 Promises & Async/Await 的过程！](https://zhuanlan.zhihu.com/p/145442030)
 - [ ] [阿里淘系前端面经(五轮技术面)](https://juejin.im/post/5e7b47f65188255e205e8037)
+- [ ] [30 seconds of code](https://www.30secondsofcode.org/)
 - [ ] []()
 - [ ] []()
+
 https://github.com/rohan-paul/Awesome-JavaScript-Interviews
 https://github.com/nieyafei/front-end-interview-js
 前端面试interview的Js题目收集
