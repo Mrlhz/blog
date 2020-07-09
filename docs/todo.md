@@ -57,6 +57,9 @@
 - [ ] [可视化的 js：动态图演示 Promises & Async/Await 的过程！](https://zhuanlan.zhihu.com/p/145442030)
 - [ ] [阿里淘系前端面经(五轮技术面)](https://juejin.im/post/5e7b47f65188255e205e8037)
 - [ ] [30 seconds of code](https://www.30secondsofcode.org/)
+- [ ] [写给前端的算法进阶指南，我是如何两个月零基础刷200题](https://juejin.im/post/5f05087cf265da22d466f60f)
+- [ ] [如何用一行 CSS 分别实现 10 种现代布局？](https://juejin.im/post/5f058bef6fb9a07eac0665fb)
+- [ ] [Vue(v2.6.11)万行源码生啃，就硬刚！](https://juejin.im/post/5f02f0bdf265da22ef7dbe5d)
 - [ ] []()
 - [ ] []()
 
