@@ -12,7 +12,7 @@ var addTwoNumbers = function (ListNode1 = [], ListNode2) {
     return acc
   }, 0)
 
-  const sum = getSum(ListNode1) + getSum(ListNode1)
+  const sum = getSum(ListNode1) + getSum(ListNode2)
 
   return (sum + '').split('').map((item) => Number(item)).reverse()
 }

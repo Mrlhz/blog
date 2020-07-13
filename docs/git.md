@@ -55,7 +55,7 @@ git log --pretty=oneline --abbrev-commit
 ### 撤销
 ```sh
 git reset HEAD <file>                 # 撤销上一次add file， 如果HEAD后面不带参数，全部撤销
-git reset --hard HEAD
+git reset --hard HEAD                 # 将工作区、暂存取和HEAD保持一致
 git checkout HEAD <file>
 git revert <commit>
 git reset HEAD <file>...              # 取消暂存的文件
