@@ -60,6 +60,8 @@
 - [ ] [写给前端的算法进阶指南，我是如何两个月零基础刷200题](https://juejin.im/post/5f05087cf265da22d466f60f)
 - [ ] [如何用一行 CSS 分别实现 10 种现代布局？](https://juejin.im/post/5f058bef6fb9a07eac0665fb)
 - [ ] [Vue(v2.6.11)万行源码生啃，就硬刚！](https://juejin.im/post/5f02f0bdf265da22ef7dbe5d)
+- [ ] [写给新手前端的各种文件上传攻略，从小图片到大文件断点续传](https://juejin.im/post/5da14778f265da5bb628e590)
+- [ ] [从零到一，带你彻底搞懂 vite 中的 HMR 原理（源码分析）](https://juejin.im/post/5f0b419ff265da22bf12be56)
 - [ ] []()
 - [ ] []()
 
