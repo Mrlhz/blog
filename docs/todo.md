@@ -163,6 +163,7 @@ jQuery源码解析（DOM与核心模块）|[imooc](https://www.imooc.com/learn/2
 ### Vue.js
 
 - [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
+- [逐行剖析 Vue.js 源码](https://vue-js.com/learn-vue/)
 
 ### 
 

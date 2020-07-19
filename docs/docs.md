@@ -11,6 +11,7 @@
 - [也许是史上最全的前端资源大汇总](https://juejin.im/entry/58ad2fc9b123db00672c965a)
 - [Freely available programming books](https://github.com/EbookFoundation/free-programming-books)
 - [前端资源](https://github.com/iq9891/awesome-frontend)
+- [Dev Hints](https://devhints.io/)
 
 
 ### css预处理器 SASS
