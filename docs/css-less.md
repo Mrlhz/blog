@@ -25,3 +25,15 @@
   .generate-columns(@n, (@i + 1));
 }
 ```
+
+```less
+.generate-col-width(12);
+
+.generate-col-width(@n, @i: 1) when (@i =< @n) {
+  .col-md-@{i} {
+    width: @i / @n * 100%
+  }
+
+  .generate-col-width(@n, @i + 1);
+}
+```
