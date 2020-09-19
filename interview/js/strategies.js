@@ -1,3 +1,7 @@
+/**
+ * 策略模式
+ */
+
 const verificationFunction = {
   isNonEmpty: function (value, errorMsg) { // 不为空 
     if (value === '') {
@@ -31,11 +35,9 @@ class Validator {
       params = Array.isArray(params) ? params : [params]
 
       let validatorFunc = this.strategies[rule.strategy]
-      if (typeof validatorFunc === 'function') {
-        this.cache.push(validatorFunc.apply(this, [value, params, errorMsg]))
-      } else {
-        this.cache.unshift(`${rule.strategy} is not a function`)
-      }
+      validatorFunc = typeof validatorFunc === 'function' ? validatorFunc : () => `${rule.strategy} is not a function`
+
+      this.cache.push(validatorFunc.apply(this, [value, ...params, errorMsg]))
     })
   }
   start() {
@@ -60,7 +62,7 @@ validator.add('abc', [{
   params: 6
 }])
 
-validator.add(1527795429, [{
+validator.add(15277954296, [{
   strategy: 'isMobile',
   errorMsg: '手机号码格式不正确'
 }])
