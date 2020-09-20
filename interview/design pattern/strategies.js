@@ -20,7 +20,8 @@ const verificationFunction = {
   }
 }
 
-
+const isFunction = (fn) => typeof fn === 'function'
+const makeParamsToArray = (params) => Array.isArray(params) ? params : [params]
 
 class Validator {
   constructor(strategies) {
@@ -30,12 +31,12 @@ class Validator {
   }
   add(value, rules = []) {
     rules.forEach(rule => {
-      let { params, errorMsg } = rule
+      let { strategy, params, errorMsg } = rule
       params = typeof params !== 'undefined' ? params : []
-      params = Array.isArray(params) ? params : [params]
+      params = makeParamsToArray(params)
 
-      let validatorFunc = this.strategies[rule.strategy]
-      validatorFunc = typeof validatorFunc === 'function' ? validatorFunc : () => `${rule.strategy} is not a function`
+      let validatorFunc = this.strategies[strategy]
+      validatorFunc = isFunction(validatorFunc) ? validatorFunc : () => `${strategy} is not a function`
 
       this.cache.push(validatorFunc.apply(this, [value, ...params, errorMsg]))
     })
@@ -45,7 +46,7 @@ class Validator {
   }
 }
 
-var validator = new Validator()
+const validator = new Validator()
 
 validator.add('hello', [{
   strategy: 'isNonEmpty',
@@ -53,7 +54,7 @@ validator.add('hello', [{
 }, {
   strategy: 'minLength',
   errorMsg: '用户名长度不能小于 10 位',
-  params: 10
+  params: [10]
 }])
 
 validator.add('abc', [{
