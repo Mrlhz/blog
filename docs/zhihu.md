@@ -1,0 +1,32 @@
+
+
+- [为什么说中国是世界上唯一一个拥有完整工业体系的国家，美国不是吗？](https://www.zhihu.com/question/322375013/answer/1449675851)
+- [如何评价仅4%中国学生表示放弃留学计划?](https://www.zhihu.com/question/419475525/answer/1488720292)
+- [我开始怀疑朝九晚五的工作是否真的存在，现在给我的感觉，全中国都在加班吗？](https://www.zhihu.com/question/359484000/answer/1520180113)
+- [如何看待媒体把已成年女嫌疑人称为「女孩」「姑娘」来博取公众同情心的行为？](https://www.zhihu.com/question/418551876/answer/1482772734)
+- [最难调试修复的 bug 是怎样的？](https://www.zhihu.com/question/21991014/answer/1513267624)
+- [你高中知道的最恶心的事是什么？](https://www.zhihu.com/question/279868913/answer/1042674302)
+- [大家怎么看待 easy girl 这个话题？](https://www.zhihu.com/question/267593227/answer/1495152395)
+- [如何看待外媒称「中国准备对谷歌发起反垄断调查」？](https://www.zhihu.com/question/423648127/answer/1501790582)
+- [如何看待目前前端面试中，很多公司很少或不问CSS，而直接问JavaScript、框架、Node.js？](https://www.zhihu.com/question/423451505/answer/1503888339)
+- [本人后台开发，前端说改个东西要两天，但我感觉撑死2小时，怎么破？](https://www.zhihu.com/question/375396826/answer/1142828247)
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+
+## 技术
+
+- [作为一个小白如何读vue的源码?](https://www.zhihu.com/question/63413015/answer/209015203)
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
