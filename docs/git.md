@@ -57,9 +57,14 @@ git log --pretty=oneline --abbrev-commit
 git reset HEAD <file>                 # 撤销上一次add file， 如果HEAD后面不带参数，全部撤销
 git reset --hard HEAD                 # 将工作区、暂存取和HEAD保持一致
 git checkout HEAD <file>
+git checkout .                        # 撤销对所有已修改但未提交的文件的修改，但不包括新增的文件
+git checkout [filename]               # 撤销对指定文件的修改，[filename]为文件名
+git reset --hard  [commit-hashcode]   # 回退到任意已经提交过的版本。已 add / commit 但未 push 的文件也适用。
 git revert <commit>
 git reset HEAD <file>...              # 取消暂存的文件
 git reset --soft HEAD^                # 撤销commit
+git reflog                            # 查看历史变更记录
+git reset --hard HEAD@{n}             # 撤销 git pull 操作，回退到 pull 错误之前
 ```
 
 ### 分支与标签
