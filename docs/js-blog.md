@@ -63,6 +63,9 @@
 - [ ] [十道大厂面试题(含答案)总结](https://juejin.im/post/5e97fe876fb9a03c2e542c1e)
 - [ ] [《前端那些事》从0到1开发工具库](https://juejin.im/post/5e958d0f6fb9a03c6675cb5d)
 - [ ] [壹题汇总](https://muyiy.cn/question/)
+- [ ] [谈谈我这些年对前端框架的理解](https://juejin.cn/post/7007048306438176799)
+- [ ] [前端仔也需要懂的nginx内容](https://juejin.cn/post/7007346707767754765)
+- [ ] []()
 
 ### 工具
 
