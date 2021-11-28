@@ -1,4 +1,6 @@
-
+- [node版本管理器 (nvm)](#node版本管理器nvm)
+- [查看npm,yarn全局安装过的包](#查看npm,yarn全局安装过的包)
+- []()
 ### 参考
 - [Yarn 中文文档](https://yarn.bootcss.com/docs/)
 
@@ -28,7 +30,7 @@ npm install --save-dev nodemon
 yarn add nodemon -D
 ```
 
-# 如何更新本地安装的包
+### 如何更新本地安装的包
 
 ```
 yarn:
@@ -67,6 +69,8 @@ yarn global add nodemon
 
 ```
 npm update -g nodemon
+
+yarn global upgrade
 ```
 
 # 如何卸载全局安装的包
@@ -80,4 +84,25 @@ npm uninstall -g nodemon
 ```
 npm init
 yarn init
+```
+
+### node版本管理器nvm
+
+- [nvm](https://github.com/nvm-sh/nvm)
+
+
+```s
+# 以管理员身份运行cmd
+$ nvm use 16.13.0
+Now using node v16.13.0 (64-bit)
+$ node -v
+v16.13.0
+$ nvm use 14.18.1
+Now using node v14.18.1 (64-bit)
+$ node -v
+v14.18.1
+$ nvm install 12
+Now using node v12.22.6 (npm v6.14.5)
+$ node -v
+v12.22.6
 ```
