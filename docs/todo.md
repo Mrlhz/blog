@@ -63,10 +63,12 @@
 - [ ] [写给新手前端的各种文件上传攻略，从小图片到大文件断点续传](https://juejin.im/post/5da14778f265da5bb628e590)
 - [ ] [从零到一，带你彻底搞懂 vite 中的 HMR 原理（源码分析）](https://juejin.im/post/5f0b419ff265da22bf12be56)
 - [ ] [Vue的混入(mixin)知多少？如何用mixin实现一个图片懒加载功能](https://juejin.im/post/6856232743286767624)
+- [x] [一篇文章搞定Vue中的混入mixin！](https://juejin.cn/post/6999160169938550820)
 - [ ] [如何写出让同事好维护的代码？](https://juejin.im/post/6856326958188494855)
 - [ ] [「一劳永逸」送你21道高频JavaScript手写面试题](https://juejin.im/post/6855129007852093453)
 - [ ] [10个Vue开发技巧助力成为更好的工程师](https://zhuanlan.zhihu.com/p/127886512)
 - [ ] [【一】尤大都说Vite香，让我来手把手分析Vite原理](https://segmentfault.com/a/1190000023317812)
+- [ ] [又快又爽的开发 Chrome 扩展程序](https://juejin.cn/post/7041185772300402725)
 - [ ] []()
 - [ ] []()
 - [ ] []()
@@ -80,6 +82,15 @@
 - [fe-interview](https://github.com/haizlin/fe-interview/issues)
 - [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) https://panjiachen.github.io/vue-element-admin
 - [Vue.Draggable](https://github.com/SortableJS/Vue.Draggable)
+
+- [Vue 3 组件库：element-plus 源码分析](https://juejin.cn/post/6914598983205847053)
+- [element-ui 的组件源码还能这么看](https://juejin.cn/post/6844903812327538702)
+- [Element UI 源码解读之 Table 组件](https://juejin.cn/post/6844903472458891271)
+- [菜鸟读element源码7](https://juejin.cn/post/6844904081195008008)
+- [仿照Element-ui实现一个简易的$message方法](https://juejin.cn/post/6871651682724364302)
+- [Element UI源码中学到的技巧](https://juejin.cn/post/6966491047257964575)
+- [每次新增页面复制粘贴？100多行源码的 element-ui 新增组件功能告诉你减少重复工作](https://juejin.cn/post/7031331765482422280)
+
 
 
 https://github.com/rohan-paul/Awesome-JavaScript-Interviews
