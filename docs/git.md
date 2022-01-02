@@ -61,6 +61,7 @@ git checkout .                        # 撤销对所有已修改但未提交的�
 git checkout [filename]               # 撤销对指定文件的修改，[filename]为文件名
 git reset --hard  [commit-hashcode]   # 回退到任意已经提交过的版本。已 add / commit 但未 push 的文件也适用。
 git revert <commit>
+git reset HEAD                        # 撤销所有暂存（add）的文件
 git reset HEAD <file>...              # 取消暂存的文件
 git reset --soft HEAD^                # 撤销commit
 git reflog                            # 查看历史变更记录

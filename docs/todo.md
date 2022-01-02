@@ -69,6 +69,7 @@
 - [ ] [10个Vue开发技巧助力成为更好的工程师](https://zhuanlan.zhihu.com/p/127886512)
 - [ ] [【一】尤大都说Vite香，让我来手把手分析Vite原理](https://segmentfault.com/a/1190000023317812)
 - [ ] [又快又爽的开发 Chrome 扩展程序](https://juejin.cn/post/7041185772300402725)
+- [ ] [8则未必知道且超级实用的纯CSS布局排版技巧 | 网易四年实践](https://juejin.cn/post/6986873449721364510)
 - [ ] []()
 - [ ] []()
 - [ ] []()
