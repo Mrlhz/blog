@@ -4,7 +4,7 @@
  * @see https://github.com/KieSun/Dream/blob/master/content/toys/deepClone/index.js
  */
 
-function isObject(obj) {
+ function isObject(obj) {
   return typeof obj === 'object' && obj !== null
 }
 
@@ -15,13 +15,21 @@ function isObject(obj) {
  * @link https://www.lodashjs.com/docs/lodash.cloneDeep
  * @param {*} obj
  */
-function deepCopy(obj) {
+function deepCopy(obj, cache = []) {
   if (!isObject(obj)) return obj
+
+  const hit = cache.filter(c => c.original === obj)
+  if (hit[0]) {
+    console.log(hit, hit[0], 'hit')
+    return hit[0].copy
+  }
 
   const copy = Array.isArray(obj) ? [] : {}
 
+  cache.push({ original: obj, copy })
+
   Object.keys(obj).forEach(key => {
-    copy[key] = deepCopy(obj[key])
+    copy[key] = deepCopy(obj[key], cache)
   })
   return copy
 }
@@ -48,4 +56,21 @@ function deepCopy(obj) {
   copyObj.d.push(5)
   
   console.log(testObj, copyObj)
+}
+
+{
+  // 循环引用测试用例
+  // https://juejin.cn/post/6844903929705136141#heading-5
+  const target = {
+    field1: 1,
+    field2: undefined,
+    field3: {
+      child: 'child'
+    },
+    field4: [2, 4, 8]
+  }
+  target.target = target
+
+  const copy = deepCopy(target)
+  console.log(copy)
 }
