@@ -15,18 +15,16 @@
  * @link https://www.lodashjs.com/docs/lodash.cloneDeep
  * @param {*} obj
  */
-function deepCopy(obj, cache = []) {
+function deepCopy(obj, cache = new WeakMap()) {
   if (!isObject(obj)) return obj
 
-  const hit = cache.filter(c => c.original === obj)
-  if (hit[0]) {
-    console.log(hit, hit[0], 'hit')
-    return hit[0].copy
+  if (cache.has(obj)) {
+    return cache.get(obj)
   }
 
   const copy = Array.isArray(obj) ? [] : {}
 
-  cache.push({ original: obj, copy })
+  cache.set(obj, copy)
 
   Object.keys(obj).forEach(key => {
     copy[key] = deepCopy(obj[key], cache)
@@ -73,4 +71,26 @@ function deepCopy(obj, cache = []) {
 
   const copy = deepCopy(target)
   console.log(copy)
+}
+
+{
+  const target = {
+    field1: 1,
+    field2: undefined,
+    field3: {
+        child: 'child'
+    },
+    field4: [2, 4, 8],
+    f: { f: { f: { f: { f: { f: { f: { f: { f: { f: { f: { f: {} } } } } } } } } } } },
+  }
+
+  target.target = target
+
+  console.time()
+  const result = deepCopy(target)
+  console.timeEnd()
+
+  console.time()
+  const result2 = deepCopy(target)
+  console.timeEnd()
 }
