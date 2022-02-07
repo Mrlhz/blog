@@ -16,6 +16,8 @@
 
 ### css预处理器 SASS
 
+- [Sass Documentation](https://sass-lang.com/documentation)
+- [Sass (3.4.21) 中文文档](https://www.html.cn/doc/sass/)
 - [SASS中文文档](https://www.sasscss.com/docs)
 - [Sass (3.4.21) 中文文档](https://www.css88.com/doc/sass/)
 - [sass to css	在线编译scss](https://www.sassmeister.com/)
