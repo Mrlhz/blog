@@ -60,15 +60,15 @@ console.log(result)
  * @reference https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
  * @returns 
  */
-function flattenTree(setting = {}, data = []) {
-  const { idKey = 'id', piIdKey = 'pId', rootId = null, childrenKey = 'children' } = setting
+function flattenTree(data = [], setting = {}) {
+  const { idKey = 'id', piIdKey = 'pId', rootId = null, childrenKey = 'children', childrenValue = [] } = setting
   const stack = [...data]
   const result = []
   while(stack.length) {
     const next = stack.shift()
-    if (Array.isArray(next.children) && next.children.length) {
-      stack.push(...next.children)
-      next.children = []
+    if (next && Array.isArray(next[childrenKey]) && next[childrenKey].length) {
+      stack.push(...next[childrenKey])
+      next[childrenKey] = childrenValue
     }
 
     result.push(next)
