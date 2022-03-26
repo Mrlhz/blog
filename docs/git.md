@@ -75,6 +75,7 @@ git branch -a                         # 查看远程分支git
 git branch <name>                     # 创建分支
 git checkout <name>                   # 切换分支
 git checkout -b <name>                # 创建+切换分支
+git checkout -b origin/<name>         # 根据远程分支创建+切换分支
 git merge <name>                      # 合并某分支到当前分支
 git branch -d <name>                  # 删除分支
 git push origin <name>                # 推送远程分支

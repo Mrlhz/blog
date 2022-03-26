@@ -5,8 +5,14 @@ class Transcation {
   perform(anyMethod, wrappers) {
     wrappers.forEach((wrapper) => wrapper.initialize())
     anyMethod()
-    wrappers.forEach((wrapper) => wrapper.close())
+    wrappers.forEach(({ close }) => {
+      isFunction(close) && close()
+    })
   }
+}
+
+function isFunction(obj) {
+  return typeof obj === 'function'
 }
 
 const transcation = new Transcation()

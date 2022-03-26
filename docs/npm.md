@@ -14,6 +14,9 @@
 - [如何创建 Node.js 模块](#如何创建Node.js模块)
 
 ### 查看npm,yarn全局安装过的包
+
+C:\Users\l\AppData\Roaming\nvm
+
 ```
 npm list -g --depth 0
 yarn global list
@@ -21,6 +24,7 @@ yarn global list
 
 ```
 npm uninstall -g nodemon
+npm uninstall -g npm-check-updates
 ```
 
 ### 如何安装本地包
@@ -93,7 +97,15 @@ yarn init
 
 ```s
 # 以管理员身份运行cmd
+
+If you want to see what versions are installed:
+
+$ nvm ls
+
 $ nvm use 16.13.0
+$ nvm use 16.14.0
+nvm use 10.24.1
+
 Now using node v16.13.0 (64-bit)
 $ node -v
 v16.13.0
@@ -102,6 +114,7 @@ Now using node v14.18.1 (64-bit)
 $ node -v
 v14.18.1
 $ nvm install 12
+$ nvm install 16.14.0
 Now using node v12.22.6 (npm v6.14.5)
 $ node -v
 v12.22.6
