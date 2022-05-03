@@ -5,3 +5,6 @@
 
 - [image to blob download](./blob/1-download-image.html)
 - [Flex 布局教程：实例篇](./blob/2-Flexbox-Dice.html)
+
+
+- [7个杀手级的JS一行代码](https://segmentfault.com/a/1190000041415254)
