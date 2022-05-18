@@ -114,8 +114,11 @@ Now using node v14.18.1 (64-bit)
 $ node -v
 v14.18.1
 $ nvm install 12
-$ nvm install 16.14.0
+$ nvm install 16.15.0
 Now using node v12.22.6 (npm v6.14.5)
 $ node -v
 v12.22.6
+
+# Uninstalling / Removal
+$ nvm uninstall 16.14.0
 ```
