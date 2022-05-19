@@ -10,3 +10,25 @@
 - [JavaScript专题之类型判断(下)](https://github.com/mqyqingfeng/Blog/issues/30)
 
 > 在 IE6 中，null 和 undefined 会被 Object.prototype.toString 识别成 [object Object]
+
+### DOM library
+
+- [你也许不需要 jQuery （You (Might) Don't Need jQuery）](https://github.com/nefe/You-Dont-Need-jQuery)
+- [You Might Not Need jQuery](https://github.com/HubSpot/youmightnotneedjquery) https://youmightnotneedjquery.com/
+- [jQuery](https://api.jquery.com/)
+- [Domq](https://github.com/nzbin/domq) Domq is a modular DOM manipulation library. It's built according to Zepto.js.
+- [你不需要 jQuery，但你需要一个 DOM 库](https://www.cnblogs.com/nzbin/p/10230272.html)
+
+- [dom-helpers tiny modular DOM lib for ie9+](https://github.com/react-bootstrap/dom-helpers)
+- [DOM helper library](https://github.com/rsuite/dom-lib)
+
+```js
+function width(el) {
+  return parseFloat(getComputedStyle(el, null).width.replace('px', ''))
+}
+
+width(document.documentElement)
+
+window.document.documentElement.clientWidth
+
+```
