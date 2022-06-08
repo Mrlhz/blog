@@ -8,7 +8,7 @@ const promisify = util.promisify
 {
   const read = promisify(fs.readFile)
 
-  read(path.resolve(__dirname, '../data/name.txt'), 'utf8')
+  read(path.resolve(__dirname, '../data/name.txt'), { encoding: 'utf-8' })
     .then((data) => console.log(data))
 }
 
@@ -24,22 +24,4 @@ const promisify = util.promisify
 
   fs.readFile(path.resolve(__dirname, '../data/name.txt'), 'utf8')
     .then((data) => console.log(data))
-}
-
-// inherits
-{
-  function Parent() {
-    this.type = 'parent'
-  }
-
-  Parent.prototype.say = function() {
-    console.log('say')
-  }
-
-  function Child() {}
-
-  util.inherits(Child, Parent) // Object.setPrototypeOf(Child.prototype, Parent.prototype)
-  
-  let child = new Child()
-  child.say()
 }
