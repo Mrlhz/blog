@@ -18,24 +18,18 @@ const floor = Math.floor
  * 6. If k < 0 or k ≥ len, return undefined.
  * 7. Return ? Get(O, ! ToString(𝔽(k))).
  */
-if (!Array.prototype.at2) {
-  Array.prototype.at2 = function at(index) {
-    const O = Object(objectCoercible(this)) // this 不是对象，抛出错误提示
-    const len = lengthOfArrayLike(O)
-    const relativeIndex = toIntegerOrInfinity(index)
-    const k = relativeIndex >= 0 ? relativeIndex : len + relativeIndex
-    console.log(this, { len, index })
-    if (k < 0 || k >= len) return
-    return O[k]
-  }
-
-  function at(index) {
-    console.log(this)
-  }
+ function at(index) {
+  const O = Object(objectCoercible(this)) // this 不是对象，抛出错误提示
+  const len = lengthOfArrayLike(O)
+  const relativeIndex = toIntegerOrInfinity(index)
+  const k = relativeIndex >= 0 ? relativeIndex : len + relativeIndex
+  if (k < 0 || k >= len) return
+  return O[k]
 }
 
-console.log([1, 2, 3].at2(1.6))
-console.log([1, 2, 3].at2(-1))
+if (!Array.prototype.at2) {
+  Array.prototype.at2 = at
+}
 
 function objectCoercible(it) {
   if (it == undefined) throw TypeError('Can\'t call method on ' + it)
@@ -61,3 +55,5 @@ function toIntegerOrInfinity(n) {
   if (Number.isNaN(number) || number === 0) return 0
   return (number > 0 ? Math.floor : Math.ceil)(number)
 }
+
+module.exports = at
