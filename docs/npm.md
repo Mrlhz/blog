@@ -13,7 +13,9 @@
 - [如何卸载全局安装的包](#如何卸载全局安装的包)
 - [如何创建 Node.js 模块](#如何创建Node.js模块)
 
-### 查看npm,yarn全局安装过的包
+### 查看npm, yarn全局安装过的包
+
+- [npm CLI Commands](https://docs.npmjs.com/cli/v8/commands)
 
 C:\Users\l\AppData\Roaming\nvm
 
@@ -99,9 +101,10 @@ yarn init
 # 以管理员身份运行cmd
 
 If you want to see what versions are installed:
-
+# 查看
 $ nvm ls
 
+# 切换node版本
 $ nvm use 16.13.0
 $ nvm use 16.14.0
 nvm use 10.24.1
@@ -113,6 +116,8 @@ $ nvm use 14.18.1
 Now using node v14.18.1 (64-bit)
 $ node -v
 v14.18.1
+
+# 下载安装node
 $ nvm install 12
 $ nvm install 16.15.0
 Now using node v12.22.6 (npm v6.14.5)

@@ -1,6 +1,10 @@
 
 ## 参考手册文档
 
+### 文档
+
+- [jsdoc](https://github.com/jsdoc/jsdoc)
+
 ### 类型检查
 - [core-util-is](https://github.com/isaacs/core-util-is)
 - [Node util.types](http://nodejs.cn/api-v16/util.html#utiltypes) 为不同种类的内置对象提供类型检查
@@ -32,3 +36,9 @@ width(document.documentElement)
 window.document.documentElement.clientWidth
 
 ```
+
+### 剪切板操作
+
+- [clipboard.js](https://github.com/zenorocha/clipboard.js)
+- [docsify-copy-code](https://github.com/jperasmus/docsify-copy-code)
+- [【JS】剪切板操作（手写复制、粘贴功能）](https://blog.csdn.net/qq_45677671/article/details/121990927)
