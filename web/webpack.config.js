@@ -15,7 +15,6 @@ module.exports = {
     filename: 'js/[name].js'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
     host: 'localhost',
     port: 3000,
     // progress: true,

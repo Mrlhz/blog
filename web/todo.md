@@ -22,7 +22,7 @@ const styles = require('css-loader!less-loader!./src/index.less');
 #### 文件
 
 loader | description
----|---|---
+---|---
 [raw-loader](https://www.npmjs.com/package/raw-loader) | 加载文件原始内容（utf-8）
 [val-loader](https://www.npmjs.com/package/val-loader) | 将代码作为模块执行，并将 exports 转为 JS 代码
 [url-loader](https://www.npmjs.com/package/url-loader) | 像 file loader 一样工作，但如果文件小于限制，可以返回 data URL
@@ -31,7 +31,7 @@ loader | description
 #### JSON
 
 loader | description
----|---|---
+---|---
 [json-loader](https://www.npmjs.com/package/json-loader) | 加载 JSON 文件（默认包含）
 [json5-loader](https://www.npmjs.com/package/json5-loader) | 加载和转译 JSON 5 文件
 [cson-loader](https://www.npmjs.com/package/cson-loader) | 加载和转译 CSON 文件
@@ -39,7 +39,7 @@ loader | description
 #### 转换编译(Transpiling)
 
 loader | description
----|---|---
+---|---
 [script-loader](https://www.npmjs.com/package/script-loader) | 在全局上下文中执行一次 JavaScript 文件（如在 script 标签），不需要解析
 [babel-loader](https://www.npmjs.com/package/babel-loader) | 加载 ES2015+ 代码，然后使用 Babel 转译为 ES5
 [buble-loader](https://www.npmjs.com/package/buble-loader) | 使用 Bublé 加载 ES2015+ 代码，并且将代码转译为 ES5
@@ -50,7 +50,7 @@ loader | description
 #### 模板(Templating)
 
 loader | description
----|---|---
+---|---
 [html-webpack-plugin](https://www.npmjs.com/package/html-webpack-plugin) | 在内存中生成html
 [html-loader](https://www.npmjs.com/package/html-loader) | 导出 HTML 为字符串，需要引用静态资源
 [pug-loader](https://www.npmjs.com/package/pug-loader) | 加载 Pug 模板并返回一个函数
@@ -64,7 +64,7 @@ loader | description
 #### 样式
 
 loader | description
----|---|---
+---|---
 [style-loader](https://www.npmjs.com/package/style-loader) | 将模块的导出作为样式添加到 DOM 中
 [css-loader](https://www.npmjs.com/package/css-loader) | 解析 CSS 文件后，使用 import 加载，并且返回 CSS 代码
 [less-loader](https://www.npmjs.com/package/less-loader) | 加载和转译 LESS 文件
@@ -75,7 +75,7 @@ loader | description
 #### 清理和测试(Linting && Testing)
 
 loader | description
----|---|---
+---|---
 [mocha-loader](https://www.npmjs.com/package/mocha-loader) | 使用 mocha 测试（浏览器/NodeJS）
 [eslint-loader](https://www.npmjs.com/package/eslint-loader) | PreLoader，使用 ESLint 清理代码
 [jshint-loader](https://www.npmjs.com/package/jshint-loader) | PreLoader，使用 JSHint 清理代码
@@ -85,7 +85,7 @@ loader | description
 #### 框架(Frameworks)
 
 loader | description
----|---|---
+---|---
 [vue-loader](https://www.npmjs.com/package/vue-loader) | 加载和转译 Vue 组件
 [polymer-loader](https://www.npmjs.com/package/polymer-loader) | 使用选择预处理器(preprocessor)处理，并且 require() 类似一等模块(first-class)的 Web 组件
 [angular2-template-loader](https://www.npmjs.com/package/angular2-template-loader) | 加载和转译 Angular 组件
