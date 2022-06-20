@@ -38,6 +38,7 @@ git mv <old> <new>                # 文件改名
 git rm <file>
 git rm --cached <file>
 git rm -r folder                  # 删除文件夹
+git rm * -f -r                    # git删除所有文件夹（清空远程仓库）
 git commit -m "commit message"
 git commit --amend                # 修改最后一次提交，合并上一次提交
 git commit -am "commit message"   # add 与 commit 合并为一步
@@ -63,7 +64,9 @@ git reset --hard  [commit-hashcode]   # 回退到任意已经提交过的版本�
 git revert <commit>
 git reset HEAD                        # 撤销所有暂存（add）的文件
 git reset HEAD <file>...              # 取消暂存的文件
-git reset --soft HEAD^                # 撤销commit
+git reset --soft HEAD^                # 撤销commit。–soft 参数用于回退到某个版本。不删除工作空间改动代码，撤销 commit，不撤销 git add
+git reset --soft HEAD~1               # 撤销commit
+git reset --soft HEAD~2               # 撤销两次commit
 git reflog                            # 查看历史变更记录
 git reset --hard HEAD@{n}             # 撤销 git pull 操作，回退到 pull 错误之前
 ```

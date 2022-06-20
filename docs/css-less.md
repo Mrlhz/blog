@@ -31,7 +31,7 @@
 
 .generate-col-width(@n, @i: 1) when (@i =< @n) {
   .col-md-@{i} {
-    width: @i / @n * 100%
+    width: (@i / @n * 100%);
   }
 
   .generate-col-width(@n, @i + 1);
