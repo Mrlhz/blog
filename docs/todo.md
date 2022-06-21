@@ -70,8 +70,8 @@
 - [ ] [【一】尤大都说Vite香，让我来手把手分析Vite原理](https://segmentfault.com/a/1190000023317812)
 - [ ] [又快又爽的开发 Chrome 扩展程序](https://juejin.cn/post/7041185772300402725)
 - [ ] [8则未必知道且超级实用的纯CSS布局排版技巧 | 网易四年实践](https://juejin.cn/post/6986873449721364510)
-- [ ] []()
-- [ ] []()
+- [ ] [腾讯二面：现在要你实现一个埋点监控SDK，你会怎么设计？](https://juejin.cn/post/7085679511290773534)
+- [ ] [web-tracing 性能监控插件](https://github.com/M-cheng-web/web-tracing)
 - [ ] []()
 
 
@@ -94,9 +94,9 @@
 
 
 
-https://github.com/rohan-paul/Awesome-JavaScript-Interviews
-https://github.com/nieyafei/front-end-interview-js
-前端面试interview的Js题目收集
+- [Awesome JavaScript Interviews](https://github.com/rohan-paul/Awesome-JavaScript-Interviews)
+- [前端面试interview的Js题目收集](https://github.com/nieyafei/front-end-interview-js)
+
 https://github.com/jimuyouyou/node-interview-questions
 Node.js面试题，侧重后端应用与对Node核心的理解
 https://github.com/paddingme/Front-end-Web-Development-Interview-Question
@@ -147,7 +147,7 @@ https://q.shanyue.tech/base/
 
 ### Node.js
 
-项目 | 地址 | github 
+项目 | 地址 | github
 ---|---|---
 Node.js 教程《Node.js 技术栈》 | [掘金](https://juejin.im/pin/5d1d9701092dcb01f6f821a6) | [github](https://github.com/Q-Angelo/Nodejs-Roadmap)
 Koa源码浅析                    | [知乎](https://zhuanlan.zhihu.com/p/70985017)
@@ -194,6 +194,6 @@ jQuery源码解析（DOM与核心模块）|[imooc](https://www.imooc.com/learn/2
 - [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
 - [逐行剖析 Vue.js 源码](https://vue-js.com/learn-vue/)
 
-### 
+###
 
 - [backbone源码解读](https://github.com/aircloud/backboneAnalyze)
