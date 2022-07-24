@@ -66,6 +66,6 @@ function xhr(config = {}) {
 //   console.log(res)
 // })
 
-xhr({ url: 'https://api.myjson.com/bins/74l63'}).then((res) => {
+xhr({ url: 'https://api.github.com/orgs/axios'}).then((res) => {
   console.log(res)
 })
