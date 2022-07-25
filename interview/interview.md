@@ -1,5 +1,5 @@
 
-- 页面自适应相关
+- [页面自适应相关](#页面自适应相关)
 - [首屏优化](#首屏优化)
 - [http状态码，缓存](#http状态码，缓存)
 - [webpack打包](#webpack打包)
@@ -14,6 +14,14 @@
 - ES6相关知识
 - vue相关知识
 
+
+### 页面自适应相关
+
+- [媒体查询](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Media_Queries)
+- [CSS 弹性盒子布局](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [flex 布局的基本概念](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- [Bootstrap](https://github.com/twbs/bootstrap)
+- [Vant](https://github.com/youzan/vant)
 
 ### 首屏优化
 
@@ -58,8 +66,14 @@
 
 ### js事件基础
 
+- JavaScript高级程序设计（第3版）
 - [EventTarget.addEventListener()](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)
 - [DOM 概述](https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model/Introduction)
+
+> 事件流描述的是从页面中接收事件的顺序。
+
+- 事件冒泡流
+- 事件捕获流
 
 ### 作用域链、变量提升、闭包
 
