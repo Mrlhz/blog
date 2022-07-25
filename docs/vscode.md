@@ -14,7 +14,7 @@ Ctrl+K Ctrl+S  打开键盘快捷方式
 
 输入 cursorLineEnd 或者cursorLine
 点击键绑定的地方
-我选择的是Ctrl+;
+我选择的是Ctrl + Alt + ]
 根据
 ```
 
@@ -23,4 +23,5 @@ Ctrl+K Ctrl+S  打开键盘快捷方式
 
 输入 cursorLineStart
 点击键绑定的地方
+我选择的是Ctrl + Alt + [
 ```
