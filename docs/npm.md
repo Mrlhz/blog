@@ -3,7 +3,7 @@
 - []()
 ### 参考
 - [Yarn 中文文档](https://yarn.bootcss.com/docs/)
-
+- [PNPm 文档](https://pnpm.io/)
 - [查看npm, yarn全局安装过的包](#查看npm,yarn全局安装过的包)
 - [如何安装本地包](#如何安装本地包)
 - [如何更新本地安装的包](#如何更新本地安装的包)
@@ -27,6 +27,15 @@ yarn global list
 ```
 npm uninstall -g nodemon
 npm uninstall -g npm-check-updates
+```
+
+### 安装nvm前
+
+```sh
+# 查询安装位置
+npm root -g
+
+C:\Users\l\AppData\Roaming\npm\node_modules
 ```
 
 ### 如何安装本地包
@@ -68,7 +77,10 @@ yarn remove [package]
 
 ```
 npm install -g nodemon
+npm install -g pnpm
 yarn global add nodemon
+yarn global add @vue/cli
+yarn global add npm-check-updates
 ```
 
 # 如何更新全局安装的包
@@ -105,7 +117,7 @@ If you want to see what versions are installed:
 $ nvm ls
 
 # 切换node版本
-$ nvm use 16.13.0
+$ nvm use 16.16.0
 $ nvm use 16.14.0
 nvm use 10.24.1
 
@@ -119,7 +131,7 @@ v14.18.1
 
 # 下载安装node
 $ nvm install 12
-$ nvm install 16.15.0
+$ nvm install 16.16.0
 Now using node v12.22.6 (npm v6.14.5)
 $ node -v
 v12.22.6
