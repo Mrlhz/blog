@@ -46,7 +46,7 @@ const list = [1, 2, 3];
 {
   // 基于for await...of循环处理
   // 触发Sys
-  const test = async function test () {
+  async function test() {
     let index = 0;
 
     list[Symbol.asyncIterator] = async function* () {
@@ -61,5 +61,22 @@ const list = [1, 2, 3];
   }
 
   console.log('for await...of')
-  test()
+  // test()
+}
+
+{
+  function sleep(ms) {
+    const optional = { delay: ms }
+    return new Promise(resolve => setTimeout(resolve, ms, optional))
+  }
+  const list = Array.from({ length: 5 }).map((_, i) => sleep(1000 * (i + 1)))
+
+  console.log('list: ', list)
+  async function main() {
+    for await (let res of list) {
+      console.log(res)
+    }
+  }
+
+  main()
 }
