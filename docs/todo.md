@@ -72,6 +72,9 @@
 - [ ] [8则未必知道且超级实用的纯CSS布局排版技巧 | 网易四年实践](https://juejin.cn/post/6986873449721364510)
 - [ ] [腾讯二面：现在要你实现一个埋点监控SDK，你会怎么设计？](https://juejin.cn/post/7085679511290773534)
 - [ ] [web-tracing 性能监控插件](https://github.com/M-cheng-web/web-tracing)
+- [x] [用了这些css命名小技巧，我的代码优雅了不少！ - 掘金](https://juejin.cn/post/7126505567408881677)
+- [ ] [你们前端可以实现：Table最后一列只展示详细信息吗？ - 掘金](https://juejin.cn/post/7135864815163015175)
+- [ ] [表格行/列合并 - antd@4.22.7 (forked) - CodeSandbox](https://codesandbox.io/s/biao-ge-xing-lie-he-bing-antd-4-22-7-forked-txlbhl?file=/demo.js)
 - [ ] []()
 
 
