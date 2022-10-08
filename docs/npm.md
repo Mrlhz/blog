@@ -139,3 +139,12 @@ v12.22.6
 # Uninstalling / Removal
 $ nvm uninstall 16.14.0
 ```
+
+### 在nvm中手动安装node
+
+1. 在 [以往的版本](https://nodejs.org/zh-cn/download/releases/) 中下载指定版本号的Node.js压缩包，如`node-v18.10.0-win-x64.zip`
+2. 解压 `node-v18.10.0-win-x64.zip` 文件到 `C:\Users\用户\AppData\Roaming\nvm` 目录，解压目录改名为 `v18.10.0`
+3. 查看所有`Node.js`版本
+```
+nvm ls
+```
