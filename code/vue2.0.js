@@ -11,15 +11,39 @@ function isObject(obj) {
   return typeof obj === 'object' && obj !== null
 }
 
+function observerArray(inserted) {
+  for (let i = 0; i < inserted.length; i++) {
+    observer(inserted[i])
+  }
+}
+
 // [6]
 function setPrototypeOfArray(target) {
   const ArrayPrototype = Array.prototype
   const proto = Object.create(ArrayPrototype);
   ['push','unshift', 'shift', 'pop', 'reverse', 'sort', 'splice'].forEach((method) => {
     // 函数劫持
-    updateView('array') // 切片编程
-    proto[method] = function () {
-      ArrayPrototype[method].call(this, ...arguments)
+    // updateView('array') // 切片编程
+    proto[method] = function (...args) {
+      const result = ArrayPrototype[method].apply(this, args)
+
+      let inserted // 新增的元素
+      switch (method) {
+        case 'push':
+        case 'unshift':
+          inserted = args
+          break;
+
+        case 'splice':
+          inserted = args.slice(2)
+        default:
+          break;
+      }
+
+      if (inserted) observerArray(inserted)
+
+      console.log('数组更新')
+      return result
     }
   })
 
@@ -28,12 +52,13 @@ function setPrototypeOfArray(target) {
 
 function observer(target) {
   if (!isObject(target)) {
-    console.log(6);
+    console.log(`observer: ${target}`)
     return target
   }
 
   if (Array.isArray(target)) {
     setPrototypeOfArray(target)
+    observerArray(target)
     // target.__proto__ = proto [6.1]
     // Object.setPrototypeOf(target, proto) // [6.2]
     // for (let i = 0; i < target.length; i++) { // [6.3]
@@ -98,5 +123,5 @@ let data = {
   version: [1, 2, 3]
 }
 observer(data)
-data.version.push(4)
+// data.version.push(4)
 // log(data.version)
