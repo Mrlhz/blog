@@ -125,7 +125,7 @@ stretch	|元素将会基于容器的宽和高，按照自身 margin box 的 cros
 ```css
 /* repeat()接受两个参数，第一个参数是重复的次数（上例是3），第二个参数是所要重复的值。 */
 
-/* 定义了6列，第1，4列的宽度为100px，第2，5列为20px，第3，6列为80px*/ 
+/* 定义了6列，第1，4列的宽度为100px，第2，5列为20px，第3，6列为80px*/
 grid-template-columns: repeat(2, 100px 20px 80px);
 
 ```
@@ -180,7 +180,7 @@ grid-template-columns: repeat(2, 100px 20px 80px);
   <div class="item item-7">7</div>
   <div class="item item-8">8</div>
   <div class="item item-9">9</div>
-</div> 
+</div>
 </html>
 
 - `grid-column`: `grid-column-start`和`grid-column-end`的合并简写形式

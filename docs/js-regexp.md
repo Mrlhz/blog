@@ -113,7 +113,7 @@ n$	| 匹配任何结尾为 n 的字符串
 
 ```js
 let reg = /http: (\/\/.+.jpg)/;
-let img1 = 'http: //img.hb.aicdn.com/bdad4f7788d7b3366c9f40406917848fa67bc7362bfa0-xLVh5p_fw658.jpg'
+let img1 = 'http://img.hb.aicdn.com/bdad4f7788d7b3366c9f40406917848fa67bc7362bfa0-xLVh5p_fw658.jpg'
 let img2 = '//img.hb.aicdn.com/4bfebd327513d3a20fbe51b591a763b8e901d776679ed-lPKjKd_fw658.jpg'
 let str = img1.replace(reg, '$1')
 console.log(str)

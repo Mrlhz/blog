@@ -107,6 +107,7 @@ yarn init
 ### node版本管理器nvm
 
 - [nvm](https://github.com/nvm-sh/nvm)
+- [nvm-windows](https://github.com/coreybutler/nvm-windows)
 
 
 ```s
@@ -148,3 +149,6 @@ $ nvm uninstall 16.14.0
 ```
 nvm ls
 ```
+
+
+不发包调试npm
