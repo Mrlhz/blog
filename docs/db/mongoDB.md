@@ -12,10 +12,6 @@
 - [MongoDB Community Download | MongoDB](https://www.mongodb.com/try/download/community)
 - [MongoDB服务启动 net start MongoDB 报错：服务名无效 解决方法](https://blog.csdn.net/myx666/article/details/118810278)
 
-```
-mongod --dbpath D:\softwares\mongodb\data\db
-```
-
 > 在mongodb安装目录bin路径，以管理员身份打开命令行
 ```
 mongod --logpath "D:\softwares\mongodb\log\mongo.log" --logappend --dbpath "D:\softwares\mongodb\data\db" --directoryperdb --serviceName "MongoDB" --serviceDisplayName "MongoDB" --remove
@@ -28,6 +24,12 @@ mongod --logpath "D:\softwares\mongodb\log\mongo.log" --logappend --dbpath "D:\s
 ```
 net start MongoDB
 ```
+
+
+```
+mongod --dbpath D:\softwares\mongodb\data\db
+```
+
 ### MongoDB Compass
 
 - [Query Your Data](https://www.mongodb.com/docs/compass/current/query/filter/)

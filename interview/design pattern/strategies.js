@@ -21,7 +21,12 @@ const verificationFunction = {
 }
 
 const isFunction = (fn) => typeof fn === 'function'
-const makeParamsToArray = (params) => Array.isArray(params) ? params : [params]
+const makeParamsToArray = (params) => {
+  if (typeof params !== 'undefined') {
+    return Array.isArray(params) ? params : [params]
+  }
+  return []
+}
 
 class Validator {
   constructor(strategies) {
@@ -32,7 +37,6 @@ class Validator {
   add(value, rules = []) {
     rules.forEach(rule => {
       let { strategy, params, errorMsg } = rule
-      params = typeof params !== 'undefined' ? params : []
       params = makeParamsToArray(params)
 
       let validatorFunc = this.strategies[strategy]
