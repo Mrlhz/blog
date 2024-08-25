@@ -49,7 +49,12 @@ git status
 git diff
 git add .
 git add <file>
-git mv <old> <new>                # 文件改名
+# 重命名文件或目录
+git mv <old> <new>
+git mv old_file.txt new_file.txt
+# 移动文件或目录：将文件file.txt移动到路径path/to/destination/中
+git mv file.txt path/to/destination/
+
 git rm <file>
 git rm --cached <file>
 git rm -r folder                  # 删除文件夹
@@ -125,6 +130,9 @@ git remote -v
 # 暂时将未提交的变化移除，稍后再移入
 git stash
 git stash pop
+
+# 仅暂存部分文件
+git stash push -- index.html style.css
 ```
 
 - todo http://www.sohu.com/a/251952125_663371
